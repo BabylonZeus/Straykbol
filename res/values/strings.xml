@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Straykbol</string>
+    <string name="menu_item_reset">Reset Bearing</string>
+    <string name="submenu_item">Sous-Toto</string>
+    <string name="submenu_entry">Toto 1</string>
+    <string name="reset_text">Reset</string>
+    <string name="fail">Echec</string>
+    <string name="toto_text">I am Toto</string>
+</resources>

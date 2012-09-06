@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Straykbol.iml" filepath="$PROJECT_DIR$/Straykbol.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StraykbolTest/StraykbolTest.iml" filepath="$PROJECT_DIR$/StraykbolTest/StraykbolTest.iml" />
+    </modules>
+  </component>
+</project>
+
