@@ -5,11 +5,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 /**
- * Created with IntelliJ IDEA.
- * User: babylonzeus
- * Date: 8/31/12
- * Time: 12:05 AM
- * To change this template use File | Settings | File Templates.
+ * Created on 31/08/2012 12:05 AM with IntelliJ IDEA,
+ * by the mighty babylonzeus in all His wisdom and glory.
  */
 public class UserOpenHelper extends SQLiteOpenHelper
 {

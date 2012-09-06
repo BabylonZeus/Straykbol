@@ -10,6 +10,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * Created by the mighty babylonzeus in all His wisdom and glory.
+ */
+
 public class StraykbolActivity extends Activity
 {
 	static final private int MENU_ITEM = Menu.FIRST;

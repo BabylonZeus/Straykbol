@@ -7,4 +7,5 @@
     <string name="reset_text">Reset</string>
     <string name="fail">Echec</string>
     <string name="toto_text">I am Toto</string>
+    <string name="shuffle_name">Gestion des tirages au sort</string>
 </resources>

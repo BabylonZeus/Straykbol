@@ -7,11 +7,8 @@ import android.test.AndroidTestCase;
 import fr.zeus.straykbol.db.UserOpenHelper;
 
 /**
- * Created with IntelliJ IDEA.
- * User: babylonzeus
- * Date: 8/31/12
- * Time: 12:02 AM
- * To change this template use File | Settings | File Templates.
+ * Created on 31/08/2012 12:02 AM with IntelliJ IDEA,
+ * by the mighty babylonzeus in all His wisdom and glory.
  */
 public class UserOpenHelperTest extends AndroidTestCase {
 	private SQLiteOpenHelper dbHelper;

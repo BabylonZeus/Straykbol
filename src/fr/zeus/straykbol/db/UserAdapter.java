@@ -6,11 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 /**
- * Created with IntelliJ IDEA.
- * User: babylonzeus
- * Date: 9/3/12
- * Time: 9:48 PM
- * To change this template use File | Settings | File Templates.
+ * Created on 03/09/2012 9:48 PM with IntelliJ IDEA,
+ * by the mighty babylonzeus in all His wisdom and glory.
  */
 public class UserAdapter
 {

@@ -8,11 +8,8 @@ import com.google.common.collect.ImmutableList;
 import java.util.Collection;
 
 /**
- * Created with IntelliJ IDEA.
- * User: babylonzeus
- * Date: 8/29/12
- * Time: 9:33 PM
- * To change this template use File | Settings | File Templates.
+ * Created on 29/08/2012 09:33 PM with IntelliJ IDEA,
+ * by the mighty babylonzeus in all His wisdom and glory.
  */
 public class ShuffleUtilityTest extends AndroidTestCase
 {

@@ -11,11 +11,8 @@ import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
 /**
- * Created with IntelliJ IDEA.
- * User: babylonzeus
- * Date: 9/5/12
- * Time: 10:59 PM
- * To change this template use File | Settings | File Templates.
+ * Created on 05/09/2012 10:59 PM with IntelliJ IDEA,
+ * by the mighty babylonzeus in all His wisdom and glory.
  */
 @RunWith(RobolectricTestRunner.class)
 public class StraykbolActivityTest

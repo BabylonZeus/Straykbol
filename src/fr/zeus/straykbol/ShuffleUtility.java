@@ -5,11 +5,8 @@ import com.google.common.collect.ImmutableList;
 import java.util.*;
 
 /**
- * Created with IntelliJ IDEA.
- * User: babylonzeus
- * Date: 8/29/12
- * Time: 11:57 PM
- * To change this template use File | Settings | File Templates.
+ * Created on 29/08/2012 11:57 PM with IntelliJ IDEA,
+ * by the mighty babylonzeus in all His wisdom and glory.
  */
 public class ShuffleUtility
 {
