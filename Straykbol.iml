@@ -41,11 +41,11 @@
       <excludeFolder url="file://$MODULE_DIR$/target/test-classes" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.easytesting:fest-assert:1.4" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.8.1" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:r09" level="project" />
     <orderEntry type="jdk" jdkName="Android 2.3.3 Platform" jdkType="Android SDK" />
     <orderEntry type="library" scope="TEST" name="com.pivotallabs:robolectric:1.1" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="org.easytesting:fest-assert:1.4" level="application" />
   </component>
 </module>
 

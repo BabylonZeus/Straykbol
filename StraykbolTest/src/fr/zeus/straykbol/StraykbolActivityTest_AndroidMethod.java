@@ -1,6 +1,7 @@
 package fr.zeus.straykbol;
 
 import android.test.ActivityInstrumentationTestCase2;
+import fr.zeus.straykbol.ihm.StraykbolActivity;
 
 /**
  * This is a simple framework for a test of an Application.  See

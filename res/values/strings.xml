@@ -8,4 +8,12 @@
     <string name="fail">Echec</string>
     <string name="toto_text">I am Toto</string>
     <string name="shuffle_name">Gestion des tirages au sort</string>
+    <string name="shuffle_newgame_name">Créer une partie</string>
+    <string name="list_manager_add">Nouvel élément</string>
+    <string name="list_manager_add_item">Ajouter un item</string>
+    <string name="list_manager_remove_item">Supprimer un item</string>
+    <string name="list_manager_name">Créer une liste</string>
+    <string name="selectEntry">Entrée sélectionnée</string>
+    <string name="cancel">Annuler</string>
+    <string name="list_manager_create_game">Créer partie</string>
 </resources>

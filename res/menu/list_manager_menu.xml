@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="Menu de la ToDo List">
+	<item
+	    android:id="@+id/menuitem_todolist_add"
+	    android:icon="@drawable/plus"
+	    android:title="@string/list_manager_add_item"
+	    android:alphabeticShortcut="a">
+	</item>
+    <item
+            android:id="@+id/menuitem_todolist_del"
+            android:icon="@drawable/x"
+            android:title="@string/list_manager_remove_item"
+            android:alphabeticShortcut="r">
+    </item>
+    <item
+            android:id="@+id/menuitem_create_game"
+            android:title="@string/list_manager_create_game"
+            android:alphabeticShortcut="r">
+    </item>
+</menu>

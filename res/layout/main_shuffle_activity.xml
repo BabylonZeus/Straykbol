@@ -17,5 +17,19 @@
                 android:layout_height="wrap_content"
                 android:text="Créer partie"
                 android:id="@+id/btnShuffleLaunchNewGameActivity" android:layout_column="1"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="List Manager"
+                android:id="@+id/btnLaunchListManager" android:layout_column="2"/>
+    </TableRow>
+    <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Joueurs :"
+                android:id="@+id/txtShuffleLaunchPlayerManagementActivityListPlayers" android:layout_column="0"/>
     </TableRow>
 </TableLayout>

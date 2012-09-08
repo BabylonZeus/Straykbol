@@ -1,6 +1,7 @@
-package fr.zeus.straykbol;
+package fr.zeus.straykbol.ihm;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import fr.zeus.straykbol.R;
 
 /**
  * Created by the mighty babylonzeus in all His wisdom and glory.
@@ -35,6 +37,19 @@ public class StraykbolActivity extends Activity
 				tv.setText("Meuh");
 			}
 		});
+
+		Button shuffle = (Button)findViewById(R.id.btnShuffleLaunchActivity);
+		shuffle.setOnClickListener(new View.OnClickListener()
+		{
+			@Override
+			public void onClick(View view)
+			{
+				Intent myIntent = new Intent(StraykbolActivity.this, MainShuffleActivity.class);
+				StraykbolActivity.this.startActivity(myIntent);
+
+			}
+		});
+
     }
 
 	@Override
