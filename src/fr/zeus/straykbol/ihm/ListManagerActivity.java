@@ -50,7 +50,8 @@ public class ListManagerActivity extends Activity
 			{
 				if (event.getAction() == KeyEvent.ACTION_DOWN)
 				{
-					if (keyCode == KeyEvent.KEYCODE_DPAD_CENTER)
+					if (keyCode == KeyEvent.KEYCODE_DPAD_CENTER
+							|| keyCode == KeyEvent.KEYCODE_ENTER)
 					{
 						listItems.add(0, visualEditText.getText().toString());
 						aa.notifyDataSetChanged();
