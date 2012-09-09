@@ -18,7 +18,8 @@ public class ShuffleNewGameActivity extends ListManagerActivity
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		//setContentView(R.layout.list_manager_activity);
+		setMenuToInflate(R.menu.shuffle_newgame_menu);
+		setContextMenuToInflate(R.menu.shuffle_newgame_contextmenu);
 	}
 
 	@Override

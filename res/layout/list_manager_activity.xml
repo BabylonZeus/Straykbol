@@ -8,7 +8,7 @@
             android:id="@+id/txtListManagerActivityAdd"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/list_manager_add"
+            android:text="@string/list_manager_add_item_defaultvalue"
             android:inputType="text"
             android:visibility="gone"
             />
