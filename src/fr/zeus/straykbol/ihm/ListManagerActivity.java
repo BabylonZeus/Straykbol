@@ -14,12 +14,13 @@ import java.util.ArrayList;
 public class ListManagerActivity extends Activity
 {
 	//private static final int SHOW_SUBACTIVITY = 1;
-	private static final int PICK_CONTACT_SUBACTIVITY = 2;
-	private boolean addingNew = false;
-	private ArrayList<String> todoItems;
-	private ListView myListView;
-	private EditText myEditText;
-	private ArrayAdapter<String> aa;
+	protected static final int PICK_CONTACT_SUBACTIVITY = 2;
+	public static final String LIST_NAME = "liste";
+	protected boolean addingNew = false;
+	protected ArrayList<String> todoItems;
+	protected ListView myListView;
+	protected EditText myEditText;
+	protected ArrayAdapter<String> aa;
 	
 	/** Called when the activity is first created. */
 	@Override
@@ -30,8 +31,15 @@ public class ListManagerActivity extends Activity
 		
 		myListView = (ListView)findViewById(R.id.lstListManagerActivity);
 		myEditText = (EditText)findViewById(R.id.txtListManagerActivityAdd);
-		
-		todoItems = new ArrayList<>();
+
+		Intent fromIntent = getIntent();
+		if (fromIntent != null
+				&& fromIntent.getStringArrayListExtra(LIST_NAME) != null
+				&& fromIntent.getStringArrayListExtra(LIST_NAME).size() > 0) {
+			todoItems = fromIntent.getStringArrayListExtra(LIST_NAME);
+		} else {
+			todoItems = new ArrayList<>();
+		}
 		int resID = R.layout.list_manager_item;
 		//aa = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, todoItems);
 		aa = new ArrayAdapter<>(this, resID, todoItems);
@@ -116,7 +124,7 @@ public class ListManagerActivity extends Activity
 			}
 			case  (R.id.menuitem_create_game):
 				Intent intent = new Intent();
-				intent.putStringArrayListExtra("liste", todoItems);
+				intent.putStringArrayListExtra(LIST_NAME, todoItems);
 				setResult(RESULT_OK, intent);
 				finish();
 		}
