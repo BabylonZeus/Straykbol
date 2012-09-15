@@ -190,4 +190,8 @@ public class ListManagerActivity extends Activity
 	{
 		this.contextMenuToInflate = contextMenuToInflate;
 	}
+
+    public ArrayList<String> getListItems() {
+        return listItems;
+    }
 }
