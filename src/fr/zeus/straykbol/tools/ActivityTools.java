@@ -18,4 +18,8 @@ public class ActivityTools {
 		}
 		return listItems;
 	}
+
+	public static Intent retrieveIntentFromArrayList(ArrayList<String> players, String listName) {
+		return new Intent().putStringArrayListExtra(listName,  players);
+	}
 }

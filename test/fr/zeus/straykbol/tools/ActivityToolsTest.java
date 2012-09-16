@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 import java.util.ArrayList;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.IsSame.sameInstance;
 
 /**
  * Created on 16/09/12 17:57 with IntelliJ IDEA,
@@ -23,6 +24,13 @@ public class ActivityToolsTest {
 		Intent intent = new Intent();
 		intent.putStringArrayListExtra(LIST_NAME, players);
 
-		assertThat(ActivityTools.retrieveArrayListFromIntent(intent, LIST_NAME), org.hamcrest.core.IsSame.sameInstance(players));
+		assertThat(ActivityTools.retrieveArrayListFromIntent(intent, LIST_NAME), sameInstance(players));
 	}
+
+	@Test
+	public void shouldRetrieveIntentFromArrayList() {
+		ArrayList<String> players = GenericTestingTools.createListOfPlayers();
+		assertThat(ActivityTools.retrieveIntentFromArrayList(players, LIST_NAME).getStringArrayListExtra(LIST_NAME), sameInstance(players));
+	}
+
 }
