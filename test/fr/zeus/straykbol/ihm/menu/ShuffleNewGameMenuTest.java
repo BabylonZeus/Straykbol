@@ -19,18 +19,18 @@ public class ShuffleNewGameMenuTest {
 	@Test
 	public void shouldShowAddItemInMenu() {
 		assertThat(MenuTools.getText_From_StringBuilt_MenuItemIndex(
-				R.menu.list_manager_menu, 0), equalTo("Ajouter un item"));
+				R.menu.shuffle_newgame_menu, 0), equalTo("Ajouter un joueur"));
 	}
 
 	@Test
 	public void shouldShowRemoveItemInMenu() {
 		assertThat(MenuTools.getText_From_StringBuilt_MenuItemIndex(
-				R.menu.list_manager_menu, 1), equalTo("Supprimer cet item"));
+				R.menu.shuffle_newgame_menu, 1), equalTo("Supprimer ce joueur"));
 	}
 
 	@Test
 	public void shouldShowCreateListInMenu() {
 		assertThat(MenuTools.getText_From_StringBuilt_MenuItemIndex(
-				R.menu.list_manager_menu, 2), equalTo("Créer liste"));
+				R.menu.shuffle_newgame_menu, 2), equalTo("Créer la partie"));
 	}
 }

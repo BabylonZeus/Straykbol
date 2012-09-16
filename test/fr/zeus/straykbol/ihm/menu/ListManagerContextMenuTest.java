@@ -6,7 +6,6 @@ import fr.zeus.straykbol.tools.MenuTools;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static com.xtremelabs.robolectric.Robolectric.shadowOf;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 
@@ -16,21 +15,10 @@ import static org.hamcrest.core.IsEqual.equalTo;
  */
 @RunWith(RobolectricTestRunner.class)
 public class ListManagerContextMenuTest {
-    @Test
-    public void shouldShowAddItemInMenu() {
-        assertThat(MenuTools.getText_From_StringBuilt_MenuItemIndex(
-                R.menu.list_manager_menu, 0), equalTo("Ajouter un item"));
-    }
 
-    @Test
-    public void shouldShowRemoveItemInMenu() {
-        assertThat(MenuTools.getText_From_StringBuilt_MenuItemIndex(
-                R.menu.list_manager_menu, 1), equalTo("Supprimer cet item"));
-    }
-
-    @Test
-    public void shouldShowCreateListInMenu() {
-        assertThat(MenuTools.getText_From_StringBuilt_MenuItemIndex(
-                R.menu.list_manager_menu, 2), equalTo("Créer liste"));
-    }
+	@Test
+	public void shouldShowAddItemInMenu() {
+		assertThat(MenuTools.getText_From_StringBuilt_MenuItemIndex(
+				R.menu.list_manager_contextmenu, 0), equalTo("Supprimer cet item"));
+	}
 }

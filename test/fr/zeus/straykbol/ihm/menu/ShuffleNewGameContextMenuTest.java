@@ -19,6 +19,6 @@ public class ShuffleNewGameContextMenuTest {
 	@Test
 	public void shouldShowAddItemInMenu() {
 		assertThat(MenuTools.getText_From_StringBuilt_MenuItemIndex(
-				R.menu.list_manager_contextmenu, 0), equalTo("Supprimer cet item"));
+				R.menu.shuffle_newgame_contextmenu, 0), equalTo("Supprimer ce joueur"));
 	}
 }
