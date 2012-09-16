@@ -1,6 +1,5 @@
 package fr.zeus.straykbol.tools;
 
-import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
 import com.xtremelabs.robolectric.shadows.ShadowActivity;

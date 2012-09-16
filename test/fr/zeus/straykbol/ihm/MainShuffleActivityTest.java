@@ -2,13 +2,11 @@ package fr.zeus.straykbol.ihm;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.opengl.Visibility;
 import android.view.View;
 import android.widget.Button;
 import com.xtremelabs.robolectric.RobolectricTestRunner;
 import com.xtremelabs.robolectric.shadows.ShadowIntent;
 import fr.zeus.straykbol.R;
-import org.hamcrest.core.Is;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
