@@ -27,19 +27,4 @@ public class ShuffleNewGameActivityTest {
 	public void shouldReturnMenuName() {
 		assertThat(activity.getMenuToInflate(), equalTo(R.menu.shuffle_newgame_menu));
 	}
-
-	/*@Test
-	public void shouldReturnMenuLabelForAddPlayer() {
-		MenuItem item = new TestMenuItem() {
-			public int getItemId() {
-				return R.id.menuitem_list_manager_add_item;
-			}
-		};
-
-		activity.onOptionsItemSelected(item);
-
-		ShadowActivity shadowActivity = shadowOf(activity);
-		MenuItem item2 = (MenuItem)shadowActivity.findViewById(R.id.menuitem_list_manager_add_item);
-		System.out.print(item2.getTitle());
-	}*/
 }

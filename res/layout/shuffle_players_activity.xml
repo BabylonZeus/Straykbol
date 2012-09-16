@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			 android:layout_width="fill_parent"
+			 android:layout_height="fill_parent">
+	<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text=""
+			android:id="@+id/lblCurrentPlayer"
+			/>
+	<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text=""
+			android:id="@+id/lblTargetPlayer"
+			/>
+	<TableRow
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent">
+		<Button
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Afficher Cible"
+				android:id="@+id/btnShufflePlayersShowTarget" android:layout_column="0"/>
+		<Button
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Suivant"
+				android:id="@+id/btnShufflePlayersShowNextPlayer" android:layout_column="1"/>
+	</TableRow>
+</TableLayout>

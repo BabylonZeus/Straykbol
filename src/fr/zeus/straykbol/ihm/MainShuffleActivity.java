@@ -27,6 +27,8 @@ public class MainShuffleActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_shuffle_activity);
 
+		setShuffleButtonState();
+
 		Button newgame = (Button) findViewById(R.id.btnShuffleLaunchNewGameActivity);
 		newgame.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -39,9 +41,7 @@ public class MainShuffleActivity extends Activity {
 			}
 		});
 
-		setShuffleButtonState();
-
-		Button shuffleplayers = (Button) findViewById(R.id.btnShuffleLaunchShuffleGameActivity);
+		Button shuffleplayers = (Button) findViewById(R.id.btnShuffleLaunchShufflePlayersActivity);
 		shuffleplayers.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
@@ -55,14 +55,21 @@ public class MainShuffleActivity extends Activity {
 				}
 			}
 		});
+
+		Button defaultplayers = (Button) findViewById(R.id.btnShufflePopulateDefaultPlayers);
+		defaultplayers.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				populateInitialPlayers();
+			}
+		});
 	}
 
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
 
-		TextView txtPlayers = (TextView) findViewById(R.id.txtShuffleLaunchPlayerManagementActivityListPlayers);
-		txtPlayers.setText("US non gérée");
+		updatePlayersList();
 
 		switch (requestCode) {
 			case (REQUEST_LIST_MANAGER): {
@@ -70,7 +77,7 @@ public class MainShuffleActivity extends Activity {
 					players = data.getStringArrayListExtra(LIST_NAME);
 					setShuffleButtonState();
 					makeText(this, "Partie créée avec " + players.size() + " joueurs", Toast.LENGTH_SHORT).show();
-					txtPlayers.setText("Joueurs : " + players.toString());
+					updatePlayersList();
 				} else {
 					makeText(this, "Liste de joueurs non modifiée", Toast.LENGTH_SHORT).show();
 				}
@@ -82,8 +89,18 @@ public class MainShuffleActivity extends Activity {
 		}
 	}
 
+	private void updatePlayersList() {
+		TextView txtPlayers = (TextView) findViewById(R.id.txtShuffleLaunchPlayerManagementActivityListPlayers);
+		if (players == null || players.size() == 0) {
+			txtPlayers.setText("Aucune partie en cours");
+		}
+		else {
+			txtPlayers.setText("Joueurs : " + players.toString());
+		}
+	}
+
 	private void setShuffleButtonState() {
-		Button shuffle = (Button) findViewById(R.id.btnShuffleLaunchShuffleGameActivity);
+		Button shuffle = (Button) findViewById(R.id.btnShuffleLaunchShufflePlayersActivity);
 		if (players == null || players.size() == 0) {
 			shuffle.setVisibility(View.INVISIBLE);
 		}
@@ -94,5 +111,17 @@ public class MainShuffleActivity extends Activity {
 
 	public ArrayList getPlayers() {
 		return players;
+	}
+
+	public void populateInitialPlayers() {
+		players = new ArrayList<>();
+		players.add("Iluvatar");
+		players.add("Manwë");
+		players.add("Ulmo");
+		players.add("Yavanna");
+		players.add("Aulë");
+		players.add("Nienna");
+		updatePlayersList();
+		setShuffleButtonState();
 	}
 }

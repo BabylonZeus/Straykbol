@@ -7,7 +7,7 @@
 	<TextView
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:text="Hello Camarade, StraykbolActivity"
+			android:text="Privét, Tovarich"
 			android:id="@+id/textview"
 			/>
 	<Button

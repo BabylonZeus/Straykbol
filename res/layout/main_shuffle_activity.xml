@@ -10,8 +10,8 @@
 		<Button
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:text="Gérer Joueurs"
-				android:id="@+id/btnShuffleLaunchPlayerManagementActivity" android:layout_column="0"/>
+				android:text="Joueurs par défaut"
+				android:id="@+id/btnShufflePopulateDefaultPlayers" android:layout_column="0"/>
 		<Button
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
@@ -21,7 +21,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="Mélanger"
-				android:id="@+id/btnShuffleLaunchShuffleGameActivity" android:layout_column="2"/>
+				android:id="@+id/btnShuffleLaunchShufflePlayersActivity" android:layout_column="2"/>
 	</TableRow>
 	<TableRow
 			android:layout_width="fill_parent"

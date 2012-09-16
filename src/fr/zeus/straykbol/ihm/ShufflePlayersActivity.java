@@ -13,6 +13,6 @@ public class ShufflePlayersActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main_shuffle_activity);
+		setContentView(R.layout.shuffle_players_activity);
 	}
 }

@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.ImmutableList;
 import com.xtremelabs.robolectric.RobolectricTestRunner;
 import com.xtremelabs.robolectric.shadows.ShadowIntent;
 import fr.zeus.straykbol.R;
@@ -12,7 +14,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
+import static com.google.common.collect.ImmutableList.of;
 import static com.xtremelabs.robolectric.Robolectric.shadowOf;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsEqual.equalTo;
@@ -36,15 +40,15 @@ public class MainShuffleActivityTest {
 		activity = new MainShuffleActivity();
 		activity.onCreate(null);
 		btnNewGame = (Button) activity.findViewById(R.id.btnShuffleLaunchNewGameActivity);
-		btnShuffleGame = (Button) activity.findViewById(R.id.btnShuffleLaunchShuffleGameActivity);
+		btnShuffleGame = (Button) activity.findViewById(R.id.btnShuffleLaunchShufflePlayersActivity);
 
 		ArrayList<String> listItems = new ArrayList<>();
-		listItems.add("tata");
-		listItems.add("tete");
-		listItems.add("titi");
-		listItems.add("toto");
-		listItems.add("tutu");
-		listItems.add("tyty");
+		listItems.add("Iluvatar");
+		listItems.add("Manwë");
+		listItems.add("Ulmo");
+		listItems.add("Yavanna");
+		listItems.add("Aulë");
+		listItems.add("Nienna");
 		intent = new Intent();
 		intent.putStringArrayListExtra(MainShuffleActivity.LIST_NAME, listItems);
 	}
