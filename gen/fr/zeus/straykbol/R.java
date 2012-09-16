@@ -8,125 +8,119 @@
 package fr.zeus.straykbol;
 
 public final class R {
-	public static final class attr {
-	}
-
-	public static final class color {
-		public static final int notepad_lines = 0x7f040001;
-		public static final int notepad_margin = 0x7f040002;
-		public static final int notepad_paper = 0x7f040000;
-		public static final int notepad_text = 0x7f040003;
-	}
-
-	public static final class dimen {
-		public static final int notepad_margin = 0x7f050000;
-	}
-
-	public static final class drawable {
-		public static final int btn_check_holo_dark = 0x7f020000;
-		public static final int btn_check_off_disabled_focused_holo_dark = 0x7f020001;
-		public static final int btn_check_off_disabled_holo_dark = 0x7f020002;
-		public static final int btn_check_off_focused_holo_dark = 0x7f020003;
-		public static final int btn_check_off_holo_dark = 0x7f020004;
-		public static final int btn_check_off_pressed_holo_dark = 0x7f020005;
-		public static final int btn_check_on_disabled_focused_holo_dark = 0x7f020006;
-		public static final int btn_check_on_disabled_holo_dark = 0x7f020007;
-		public static final int btn_check_on_focused_holo_dark = 0x7f020008;
-		public static final int btn_check_on_holo_dark = 0x7f020009;
-		public static final int btn_check_on_pressed_holo_dark = 0x7f02000a;
-		public static final int btn_default_disabled_focused_holo_dark = 0x7f02000b;
-		public static final int btn_default_disabled_holo_dark = 0x7f02000c;
-		public static final int btn_default_focused_holo_dark = 0x7f02000d;
-		public static final int btn_default_holo_dark = 0x7f02000e;
-		public static final int btn_default_normal_holo_dark = 0x7f02000f;
-		public static final int btn_default_pressed_holo_dark = 0x7f020010;
-		public static final int btn_toggle_holo_dark = 0x7f020011;
-		public static final int btn_toggle_off_disabled_focused_holo_dark = 0x7f020012;
-		public static final int btn_toggle_off_disabled_holo_dark = 0x7f020013;
-		public static final int btn_toggle_off_focused_holo_dark = 0x7f020014;
-		public static final int btn_toggle_off_normal_holo_dark = 0x7f020015;
-		public static final int btn_toggle_off_pressed_holo_dark = 0x7f020016;
-		public static final int btn_toggle_on_disabled_focused_holo_dark = 0x7f020017;
-		public static final int btn_toggle_on_disabled_holo_dark = 0x7f020018;
-		public static final int btn_toggle_on_focused_holo_dark = 0x7f020019;
-		public static final int btn_toggle_on_normal_holo_dark = 0x7f02001a;
-		public static final int btn_toggle_on_pressed_holo_dark = 0x7f02001b;
-		public static final int edit_text_holo_dark = 0x7f02001c;
-		public static final int list_focused_holo = 0x7f02001d;
-		public static final int list_longpressed_holo = 0x7f02001e;
-		public static final int list_pressed_holo_dark = 0x7f02001f;
-		public static final int list_selector_background_transition_holo_dark = 0x7f020020;
-		public static final int list_selector_disabled_holo_dark = 0x7f020021;
-		public static final int list_selector_holo_dark = 0x7f020022;
-		public static final int nuclear = 0x7f020023;
-		public static final int plus = 0x7f020024;
-		public static final int textfield_activated_holo_dark = 0x7f020025;
-		public static final int textfield_default_holo_dark = 0x7f020026;
-		public static final int textfield_disabled_focused_holo_dark = 0x7f020027;
-		public static final int textfield_disabled_holo_dark = 0x7f020028;
-		public static final int textfield_focused_holo_dark = 0x7f020029;
-		public static final int x = 0x7f02002a;
-	}
-
-	public static final class id {
-		public static final int btnLaunchListManager = 0x7f090007;
-		public static final int btnShuffleLaunchActivity = 0x7f090004;
-		public static final int btnShuffleLaunchNewGameActivity = 0x7f090006;
-		public static final int btnShuffleLaunchPlayerManagementActivity = 0x7f090005;
-		public static final int button = 0x7f090003;
-		public static final int contextmenuitem_list_manager_delete_item = 0x7f090009;
-		public static final int lstListManagerActivity = 0x7f090001;
-		public static final int menuitem_list_manager_add_item = 0x7f09000a;
-		public static final int menuitem_list_manager_create_list = 0x7f09000c;
-		public static final int menuitem_list_manager_delete_item = 0x7f09000b;
-		public static final int textview = 0x7f090002;
-		public static final int txtListManagerActivityAdd = 0x7f090000;
-		public static final int txtShuffleLaunchPlayerManagementActivityListPlayers = 0x7f090008;
-	}
-
-	public static final class layout {
-		public static final int list_manager_activity = 0x7f030000;
-		public static final int list_manager_item = 0x7f030001;
-		public static final int main = 0x7f030002;
-		public static final int main_shuffle_activity = 0x7f030003;
-		public static final int new_game_shuffle_activity = 0x7f030004;
-	}
-
-	public static final class menu {
-		public static final int list_manager_contextmenu = 0x7f080000;
-		public static final int list_manager_menu = 0x7f080001;
-		public static final int shuffle_newgame_contextmenu = 0x7f080002;
-		public static final int shuffle_newgame_menu = 0x7f080003;
-	}
-
-	public static final class string {
-		public static final int app_name = 0x7f060000;
-		public static final int cancel = 0x7f060009;
-		public static final int fail = 0x7f060005;
-		public static final int list_manager_activity_name = 0x7f06000d;
-		public static final int list_manager_add_item_defaultvalue = 0x7f06000c;
-		public static final int menu_item_list_manager_add_item = 0x7f06000f;
-		public static final int menu_item_list_manager_create_list = 0x7f060011;
-		public static final int menu_item_list_manager_delete_item = 0x7f060010;
-		public static final int menu_item_reset = 0x7f060001;
-		public static final int menu_item_shuffle_newgame_add_item = 0x7f060012;
-		public static final int menu_item_shuffle_newgame_create_list = 0x7f060014;
-		public static final int menu_item_shuffle_newgame_delete_item = 0x7f060013;
-		public static final int menu_name_list_manager = 0x7f06000e;
-		public static final int menu_name_shuffle_newgame = 0x7f06000b;
-		public static final int reset_text = 0x7f060004;
-		public static final int selectEntry = 0x7f060008;
-		public static final int shuffle_activity_name = 0x7f060007;
-		public static final int shuffle_newgame_activity_name = 0x7f06000a;
-		public static final int submenu_entry = 0x7f060003;
-		public static final int submenu_item = 0x7f060002;
-		public static final int toto_text = 0x7f060006;
-	}
-
-	public static final class style {
-		public static final int ButtonStraykbolTheme = 0x7f070000;
-		public static final int ImageButtonStraykbolTheme = 0x7f070001;
-		public static final int StraykbolTheme = 0x7f070003;
-		public static final int ToggleStraykbolTheme = 0x7f070002;
-	}
+    public static final class attr {
+    }
+    public static final class color {
+        public static final int notepad_lines=0x7f040001;
+        public static final int notepad_margin=0x7f040002;
+        public static final int notepad_paper=0x7f040000;
+        public static final int notepad_text=0x7f040003;
+    }
+    public static final class dimen {
+        public static final int notepad_margin=0x7f050000;
+    }
+    public static final class drawable {
+        public static final int btn_check_holo_dark=0x7f020000;
+        public static final int btn_check_off_disabled_focused_holo_dark=0x7f020001;
+        public static final int btn_check_off_disabled_holo_dark=0x7f020002;
+        public static final int btn_check_off_focused_holo_dark=0x7f020003;
+        public static final int btn_check_off_holo_dark=0x7f020004;
+        public static final int btn_check_off_pressed_holo_dark=0x7f020005;
+        public static final int btn_check_on_disabled_focused_holo_dark=0x7f020006;
+        public static final int btn_check_on_disabled_holo_dark=0x7f020007;
+        public static final int btn_check_on_focused_holo_dark=0x7f020008;
+        public static final int btn_check_on_holo_dark=0x7f020009;
+        public static final int btn_check_on_pressed_holo_dark=0x7f02000a;
+        public static final int btn_default_disabled_focused_holo_dark=0x7f02000b;
+        public static final int btn_default_disabled_holo_dark=0x7f02000c;
+        public static final int btn_default_focused_holo_dark=0x7f02000d;
+        public static final int btn_default_holo_dark=0x7f02000e;
+        public static final int btn_default_normal_holo_dark=0x7f02000f;
+        public static final int btn_default_pressed_holo_dark=0x7f020010;
+        public static final int btn_toggle_holo_dark=0x7f020011;
+        public static final int btn_toggle_off_disabled_focused_holo_dark=0x7f020012;
+        public static final int btn_toggle_off_disabled_holo_dark=0x7f020013;
+        public static final int btn_toggle_off_focused_holo_dark=0x7f020014;
+        public static final int btn_toggle_off_normal_holo_dark=0x7f020015;
+        public static final int btn_toggle_off_pressed_holo_dark=0x7f020016;
+        public static final int btn_toggle_on_disabled_focused_holo_dark=0x7f020017;
+        public static final int btn_toggle_on_disabled_holo_dark=0x7f020018;
+        public static final int btn_toggle_on_focused_holo_dark=0x7f020019;
+        public static final int btn_toggle_on_normal_holo_dark=0x7f02001a;
+        public static final int btn_toggle_on_pressed_holo_dark=0x7f02001b;
+        public static final int edit_text_holo_dark=0x7f02001c;
+        public static final int list_focused_holo=0x7f02001d;
+        public static final int list_longpressed_holo=0x7f02001e;
+        public static final int list_pressed_holo_dark=0x7f02001f;
+        public static final int list_selector_background_transition_holo_dark=0x7f020020;
+        public static final int list_selector_disabled_holo_dark=0x7f020021;
+        public static final int list_selector_holo_dark=0x7f020022;
+        public static final int nuclear=0x7f020023;
+        public static final int plus=0x7f020024;
+        public static final int textfield_activated_holo_dark=0x7f020025;
+        public static final int textfield_default_holo_dark=0x7f020026;
+        public static final int textfield_disabled_focused_holo_dark=0x7f020027;
+        public static final int textfield_disabled_holo_dark=0x7f020028;
+        public static final int textfield_focused_holo_dark=0x7f020029;
+        public static final int x=0x7f02002a;
+    }
+    public static final class id {
+        public static final int btnShuffleLaunchActivity=0x7f090004;
+        public static final int btnShuffleLaunchNewGameActivity=0x7f090006;
+        public static final int btnShuffleLaunchPlayerManagementActivity=0x7f090005;
+        public static final int btnShuffleLaunchShuffleGameActivity=0x7f090007;
+        public static final int button=0x7f090003;
+        public static final int contextmenuitem_list_manager_delete_item=0x7f090009;
+        public static final int lstListManagerActivity=0x7f090001;
+        public static final int menuitem_list_manager_add_item=0x7f09000a;
+        public static final int menuitem_list_manager_create_list=0x7f09000c;
+        public static final int menuitem_list_manager_delete_item=0x7f09000b;
+        public static final int textview=0x7f090002;
+        public static final int txtListManagerActivityAdd=0x7f090000;
+        public static final int txtShuffleLaunchPlayerManagementActivityListPlayers=0x7f090008;
+    }
+    public static final class layout {
+        public static final int list_manager_activity=0x7f030000;
+        public static final int list_manager_item=0x7f030001;
+        public static final int main=0x7f030002;
+        public static final int main_shuffle_activity=0x7f030003;
+        public static final int new_game_shuffle_activity=0x7f030004;
+    }
+    public static final class menu {
+        public static final int list_manager_contextmenu=0x7f080000;
+        public static final int list_manager_menu=0x7f080001;
+        public static final int shuffle_newgame_contextmenu=0x7f080002;
+        public static final int shuffle_newgame_menu=0x7f080003;
+    }
+    public static final class string {
+        public static final int app_name=0x7f060000;
+        public static final int cancel=0x7f060009;
+        public static final int fail=0x7f060005;
+        public static final int list_manager_activity_name=0x7f06000f;
+        public static final int list_manager_add_item_defaultvalue=0x7f06000e;
+        public static final int menu_item_list_manager_add_item=0x7f060011;
+        public static final int menu_item_list_manager_create_list=0x7f060013;
+        public static final int menu_item_list_manager_delete_item=0x7f060012;
+        public static final int menu_item_reset=0x7f060001;
+        public static final int menu_item_shuffle_newgame_add_item=0x7f060014;
+        public static final int menu_item_shuffle_newgame_create_list=0x7f060016;
+        public static final int menu_item_shuffle_newgame_delete_item=0x7f060015;
+        public static final int menu_name_list_manager=0x7f060010;
+        public static final int menu_name_shuffle_newgame=0x7f06000b;
+        public static final int reset_text=0x7f060004;
+        public static final int selectEntry=0x7f060008;
+        public static final int shuffle_activity_name=0x7f060007;
+        public static final int shuffle_newgame_activity_name=0x7f06000a;
+        public static final int shuffle_players_activity_name=0x7f06000d;
+        public static final int shuffle_players_empty_message=0x7f06000c;
+        public static final int submenu_entry=0x7f060003;
+        public static final int submenu_item=0x7f060002;
+        public static final int toto_text=0x7f060006;
+    }
+    public static final class style {
+        public static final int ButtonStraykbolTheme=0x7f070000;
+        public static final int ImageButtonStraykbolTheme=0x7f070001;
+        public static final int StraykbolTheme=0x7f070003;
+        public static final int ToggleStraykbolTheme=0x7f070002;
+    }
 }

@@ -20,8 +20,8 @@
 		<Button
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:text="List Manager"
-				android:id="@+id/btnLaunchListManager" android:layout_column="2"/>
+				android:text="Mélanger"
+				android:id="@+id/btnShuffleLaunchShuffleGameActivity" android:layout_column="2"/>
 	</TableRow>
 	<TableRow
 			android:layout_width="fill_parent"

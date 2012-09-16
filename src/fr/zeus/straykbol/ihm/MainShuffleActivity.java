@@ -39,27 +39,20 @@ public class MainShuffleActivity extends Activity {
 			}
 		});
 
-		/*Button manageplayers = (Button)findViewById(R.id.btnShuffleLaunchPlayerManagementActivity);
-		manageplayers.setOnClickListener(new View.OnClickListener()
-		{RESULT_OK
-			@Override
-			public void onClick(View view)
-			{
-				Intent myIntent = new Intent(StraykbolActivity.this, MainShuffleActivity.class);
-				startActivity(myIntent);
+		setShuffleButtonState();
 
-			}
-		});*/
-
-		Button launchListManager = (Button) findViewById(R.id.btnLaunchListManager);
-		launchListManager.setOnClickListener(new View.OnClickListener() {
+		Button shuffleplayers = (Button) findViewById(R.id.btnShuffleLaunchShuffleGameActivity);
+		shuffleplayers.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Intent myIntent = new Intent(MainShuffleActivity.this, ListManagerActivity.class);
 				if (players != null && players.size() > 0) {
+					Intent myIntent = new Intent(MainShuffleActivity.this, ShufflePlayersActivity.class);
 					myIntent.putStringArrayListExtra(LIST_NAME, players);
+					MainShuffleActivity.this.startActivityForResult(myIntent, REQUEST_LIST_MANAGER);
 				}
-				MainShuffleActivity.this.startActivityForResult(myIntent, REQUEST_LIST_MANAGER);
+				else {
+					Toast.makeText(MainShuffleActivity.this, R.string.shuffle_players_empty_message, Toast.LENGTH_LONG).show();
+				}
 			}
 		});
 	}
@@ -75,6 +68,7 @@ public class MainShuffleActivity extends Activity {
 			case (REQUEST_LIST_MANAGER): {
 				if (resultCode == Activity.RESULT_OK) {
 					players = data.getStringArrayListExtra(LIST_NAME);
+					setShuffleButtonState();
 					makeText(this, "Partie créée avec " + players.size() + " joueurs", Toast.LENGTH_SHORT).show();
 					txtPlayers.setText("Joueurs : " + players.toString());
 				} else {
@@ -86,5 +80,19 @@ public class MainShuffleActivity extends Activity {
 				makeText(this, "Erreur lors du retour de la liste; requestCode: " + requestCode, Toast.LENGTH_SHORT).show();
 				break;
 		}
+	}
+
+	private void setShuffleButtonState() {
+		Button shuffle = (Button) findViewById(R.id.btnShuffleLaunchShuffleGameActivity);
+		if (players == null || players.size() == 0) {
+			shuffle.setVisibility(View.INVISIBLE);
+		}
+		else {
+			shuffle.setVisibility(View.VISIBLE);
+		}
+	}
+
+	public ArrayList getPlayers() {
+		return players;
 	}
 }

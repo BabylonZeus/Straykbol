@@ -16,6 +16,10 @@
 
 	<string name="shuffle_newgame_activity_name">Créer une partie</string>
 	<string name="menu_name_shuffle_newgame">Menu de création de joueurs</string>
+	<string name="shuffle_players_empty_message">Il n\'y a aucun joueur dans la partie</string>
+
+	<string name="shuffle_players_activity_name">Tirage au sort</string>
+
 
 	<string name="list_manager_add_item_defaultvalue"></string>
 	<string name="list_manager_activity_name">Créer une liste</string>
