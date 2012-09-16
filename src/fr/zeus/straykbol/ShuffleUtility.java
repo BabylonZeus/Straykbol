@@ -23,6 +23,5 @@ public class ShuffleUtility {
 			Collections.swap(listOutput, i, j);
 		}
 		return new ImmutableList.Builder<String>().addAll(listOutput).build();
-		//return new ImmutableList.Builder<String>().add("Mathias", "Loïc", "Corinne", "Patrick").build();
 	}
 }

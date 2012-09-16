@@ -25,16 +25,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b4bb53f-85a6-4b72-bd69-28477c05cf78" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fr/zeus/straykbol/ihm/ShufflePlayersActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StraykbolTest/gen/fr/zeus/straykbol/tests/BuildConfig.java" afterPath="$PROJECT_DIR$/StraykbolTest/gen/fr/zeus/straykbol/tests/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/fr/zeus/straykbol/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/fr/zeus/straykbol/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/fr/zeus/straykbol/R.java" afterPath="$PROJECT_DIR$/gen/fr/zeus/straykbol/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main_shuffle_activity.xml" afterPath="$PROJECT_DIR$/res/layout/main_shuffle_activity.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fr/zeus/straykbol/ihm/MainShuffleActivity.java" afterPath="$PROJECT_DIR$/src/fr/zeus/straykbol/ihm/MainShuffleActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fr/zeus/straykbol/ihm/MainShuffleActivityTest.java" afterPath="$PROJECT_DIR$/test/fr/zeus/straykbol/ihm/MainShuffleActivityTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fr/zeus/straykbol/ShuffleUtility.java" afterPath="$PROJECT_DIR$/src/fr/zeus/straykbol/ShuffleUtility.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fr/zeus/straykbol/ShuffleUtilityTest.java" afterPath="$PROJECT_DIR$/test/fr/zeus/straykbol/ShuffleUtilityTest.java" />
     </list>
     <ignored path="Straykbol.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -107,7 +100,7 @@
       <file leaf-file-name="MainShuffleActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fr/zeus/straykbol/ihm/MainShuffleActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="55" selection-start="633" selection-end="784" vertical-scroll-proportion="0.0">
+            <state line="29" column="33" selection-start="813" selection-end="813" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -116,16 +109,16 @@
       <file leaf-file-name="MainShuffleActivityTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/fr/zeus/straykbol/ihm/MainShuffleActivityTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="5" selection-start="2133" selection-end="2133" vertical-scroll-proportion="0.0">
+            <state line="22" column="0" selection-start="712" selection-end="754" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShufflePlayersActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ShufflePlayersActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fr/zeus/straykbol/ihm/ShufflePlayersActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="441" selection-end="441" vertical-scroll-proportion="0.6035503">
+            <state line="18" column="0" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,20 +126,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <file leaf-file-name="ShuffleUtility.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/fr/zeus/straykbol/ShuffleUtility.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="19" selection-start="904" selection-end="904" vertical-scroll-proportion="0.0">
+            <state line="25" column="5" selection-start="764" selection-end="764" vertical-scroll-proportion="0.67061144">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <file leaf-file-name="ShuffleUtilityTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/fr/zeus/straykbol/ShuffleUtilityTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="47" selection-start="790" selection-end="819" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="24" column="27" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -173,8 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/fr/zeus/straykbol/ihm/ListManagerActivity.java" />
         <option value="$PROJECT_DIR$/test/fr/zeus/straykbol/ihm/ListManagerActivityTest.java" />
         <option value="$PROJECT_DIR$/test/fr/zeus/straykbol/ihm/menu/ListManagerMenuTest.java" />
         <option value="$PROJECT_DIR$/res/menu/list_manager_menu.xml" />
@@ -183,12 +176,14 @@
         <option value="$PROJECT_DIR$/test/fr/zeus/straykbol/ihm/menu/ShuffleNewGameContextMenuTest.java" />
         <option value="$PROJECT_DIR$/test/fr/zeus/straykbol/ihm/menu/ShuffleNewGameMenuTest.java" />
         <option value="$PROJECT_DIR$/test/fr/zeus/straykbol/ihm/ListManagerActivityAcceptanceTest.java" />
-        <option value="$PROJECT_DIR$/res/layout/main_shuffle_activity.xml" />
-        <option value="$PROJECT_DIR$/test/fr/zeus/straykbol/ihm/MainShuffleActivityTest.java" />
         <option value="$PROJECT_DIR$/src/fr/zeus/straykbol/ihm/MainShuffleActivity.java" />
         <option value="$PROJECT_DIR$/src/fr/zeus/straykbol/ihm/ShufflePlayersActivity.java" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/layout/main_shuffle_activity.xml" />
+        <option value="$PROJECT_DIR$/src/fr/zeus/straykbol/ShuffleUtility.java" />
+        <option value="$PROJECT_DIR$/test/fr/zeus/straykbol/ihm/MainShuffleActivityTest.java" />
+        <option value="$PROJECT_DIR$/test/fr/zeus/straykbol/ShuffleUtilityTest.java" />
       </list>
     </option>
   </component>
@@ -396,6 +391,24 @@
               <option name="myItemId" value="straykbol" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Straykbol" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="straykbol" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="straykbol" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tools" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -433,32 +446,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="straykbol" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ihm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Straykbol" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="straykbol" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -486,6 +473,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ihm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Straykbol" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="straykbol" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="straykbol" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -598,7 +607,7 @@
     <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/test/fr/zeus/straykbol/ihm" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/test/fr/zeus/straykbol" />
     <property name="options.lastSelected" value="preferences.sourceCode" />
     <property name="project.structure.side.proportion" value="0.14469773" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -608,12 +617,12 @@
     <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="fr.zeus.straykbol.ihm" />
       <recent name="fr.zeus.straykbol" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="fr.zeus.straykbol.ihm.menu" />
@@ -631,41 +640,18 @@
       <recent name="fr.zeus.straykbol.ihm" />
       <recent name="fr.zeus.straykbol" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="fr.zeus.straykbol" />
+      <recent name="fr.zeus.straykbol.ihm" />
+      <recent name="fr.zeus.straykbol.db" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/res/values" />
       <recent name="$PROJECT_DIR$/src/test/java" />
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="fr.zeus.straykbol.ihm" />
-      <recent name="fr.zeus.straykbol" />
-      <recent name="fr.zeus.straykbol.db" />
-    </key>
   </component>
-  <component name="RunManager" selected="Android Application.Straykbol">
-    <configuration default="false" name="MainShuffleActivityTest.shouldNotShowShuffle_on_EmptyGame" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="Straykbol" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="fr.zeus.straykbol.ihm" />
-      <option name="MAIN_CLASS_NAME" value="fr.zeus.straykbol.ihm.MainShuffleActivityTest" />
-      <option name="METHOD_NAME" value="shouldNotShowShuffle_on_EmptyGame" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.All in Straykbol">
     <configuration default="false" name="MainShuffleActivityTest.shouldShowShuffleButton_on_NonEmptyGame" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Straykbol" />
@@ -744,6 +730,29 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ShuffleUtilityTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Straykbol" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="fr.zeus.straykbol" />
+      <option name="MAIN_CLASS_NAME" value="fr.zeus.straykbol.ShuffleUtilityTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1018,11 +1027,11 @@
       <item index="0" class="java.lang.String" itemvalue="Android Application.Straykbol" />
       <item index="1" class="java.lang.String" itemvalue="Android Tests.StraykbolTest" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.StraykbolActivityTestOLD.shouldUpdateResultsWhenButtonIsClicked" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.MainShuffleActivityTest.shouldNotShowShuffle_on_EmptyGame" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.MainShuffleActivityTest.shouldShowShuffleButton_on_NonEmptyGame" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.MainShuffleActivityTest.shouldOpenShufflePlayersActivity" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.MainShuffleActivityTest.shouldOpenShuffleNewGameActivity" />
-      <item index="7" class="java.lang.String" itemvalue="JUnit.All in Straykbol" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.MainShuffleActivityTest.shouldShowShuffleButton_on_NonEmptyGame" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.MainShuffleActivityTest.shouldOpenShufflePlayersActivity" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.MainShuffleActivityTest.shouldOpenShuffleNewGameActivity" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.All in Straykbol" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.ShuffleUtilityTest" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -1082,7 +1091,9 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39761904" sideWeight="0.7649919" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39761904" sideWeight="0.20308693" order="8" side_tool="true" content_ui="tabs" />
@@ -1105,8 +1116,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34602916" sideWeight="0.6013289" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3159664" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1170,56 +1179,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/lib/android-2.3.3.jar!/android/app/Activity.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="28" selection-start="469" selection-end="469" vertical-scroll-proportion="0.20773931" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/fr/zeus/straykbol/ihm/ListManagerActivityAcceptanceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="0" selection-start="2787" selection-end="2787" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/new_game_shuffle_activity.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/fr/zeus/straykbol/ihm/menu/ListManagerContextMenuTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="33" selection-start="648" selection-end="648" vertical-scroll-proportion="0.44990548" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/zeus/straykbol/ihm/ListManagerActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="41" selection-start="524" selection-end="551" vertical-scroll-proportion="0.23062016" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main_shuffle_activity.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="68" selection-start="842" selection-end="877" vertical-scroll-proportion="0.75775194" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/zeus/straykbol/ihm/ShuffleNewGameActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="335" selection-end="335" vertical-scroll-proportion="0.25838265" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/fr/zeus/straykbol/ihm/menu/ListManagerMenuTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="29" selection-start="720" selection-end="720" vertical-scroll-proportion="0.43589744" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/zeus/straykbol/ihm/MainShuffleActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="55" selection-start="633" selection-end="784" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/fr/zeus/straykbol/ihm/MainShuffleActivityTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="5" selection-start="2133" selection-end="2133" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="56" column="22" selection-start="1494" selection-end="1494" vertical-scroll-proportion="0.0">
@@ -1255,12 +1214,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main_shuffle_activity.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="47" selection-start="150" selection-end="150" vertical-scroll-proportion="0.103238866">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/zeus/straykbol/ihm/ShufflePlayersActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="441" selection-end="441" vertical-scroll-proportion="0.6035503">
+        <state line="18" column="0" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../Tools/android-sdk/platforms/android-10/android.jar!/java/util/Collections.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="147" selection-end="147" vertical-scroll-proportion="0.13765182">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/zeus/straykbol/ihm/MainShuffleActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="33" selection-start="813" selection-end="813" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/fr/zeus/straykbol/ihm/MainShuffleActivityTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="712" selection-end="754" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/zeus/straykbol/ihm/StraykbolActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="13" selection-start="437" selection-end="437" vertical-scroll-proportion="0.16765286">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/fr/zeus/straykbol/ihm/StraykbolActivityTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="13" selection-start="733" selection-end="733" vertical-scroll-proportion="-0.3097166">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StraykbolTest/src/fr/zeus/straykbol/db/UserOpenHelperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="330" selection-end="330" vertical-scroll-proportion="0.26824456">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StraykbolTest/src/fr/zeus/straykbol/db/UserAdapterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="201" selection-end="201" vertical-scroll-proportion="0.26824456">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/fr/zeus/straykbol/ShuffleUtilityTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="27" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/zeus/straykbol/ShuffleUtility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="5" selection-start="764" selection-end="764" vertical-scroll-proportion="0.67061144">
+          <folding />
         </state>
       </provider>
     </entry>

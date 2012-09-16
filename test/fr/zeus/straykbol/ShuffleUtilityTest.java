@@ -1,31 +1,39 @@
 package fr.zeus.straykbol;
 
-import android.test.AndroidTestCase;
 import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
 import com.google.common.collect.ImmutableList;
+import com.xtremelabs.robolectric.RobolectricTestRunner;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import java.util.Collection;
+
+import static org.hamcrest.core.IsEqual.equalTo;
+import static org.hamcrest.core.IsNull.notNullValue;
+import static org.junit.Assert.assertThat;
 
 /**
  * Created on 29/08/2012 09:33 PM with IntelliJ IDEA,
  * by the mighty babylonzeus in all His wisdom and glory.
  */
-public class ShuffleUtilityTest extends AndroidTestCase {
+public class ShuffleUtilityTest {
 	ImmutableList<String> listInput;
 
-	@Override
-	protected void setUp() throws Exception {
-		listInput = new ImmutableList.Builder<String>().add("Patrick", "Corinne", "Loïc", "Mathias").build();
-		super.setUp();
+	@Before
+	public void setUp() throws Exception {
+		listInput = new ImmutableList.Builder<String>().add("Iluvatar", "Manwë", "Ulmo", "Yavanna", "Aulë", "Nienna").build();
 	}
 
+	@Test
 	public void testShouldReturnSameSizeList() {
 		ImmutableList<String> listOutput = ShuffleUtility.retrieveRandomizedList(listInput);
-		assertNotNull(listOutput);
-		assertTrue(listOutput.size() == listInput.size());
+		assertThat(listOutput, notNullValue());
+		assertThat(listOutput.size(), equalTo(listInput.size()));
 	}
 
+	@Test
 	public void testShouldReturnRandomOrderFromList() {
 		ImmutableList<String> listOutput = ShuffleUtility.retrieveRandomizedList(listInput);
 
@@ -39,7 +47,7 @@ public class ShuffleUtilityTest extends AndroidTestCase {
 					return false;
 				}
 			});
-			assertTrue(testItem.size() == 1);
+			assertThat(testItem.size(), equalTo(1));
 		}
 	}
 
