@@ -24,4 +24,17 @@ public class ShuffleUtility {
 		}
 		return new ImmutableList.Builder<String>().addAll(listOutput).build();
 	}
+
+	public static List<String> retrieveRandomizedList(List<String> listInput) {
+		List<String> listOutput = new ArrayList<>();
+		listOutput.addAll(listInput);
+
+		//Algo de Fisher–Yates
+		Random rnd = new Random();
+		for (int i = listInput.size() - 1; i >= 1; i--) {
+			int j = rnd.nextInt(i + 1);
+			Collections.swap(listOutput, i, j);
+		}
+		return listOutput;
+	}
 }

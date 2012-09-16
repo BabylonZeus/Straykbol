@@ -3,10 +3,13 @@ package fr.zeus.straykbol;
 import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
 import com.google.common.collect.ImmutableList;
+import fr.zeus.straykbol.tools.GenericTestingTools;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.hamcrest.core.IsNull.notNullValue;
@@ -32,8 +35,27 @@ public class ShuffleUtilityTest {
 	}
 
 	@Test
-	public void testShouldReturnRandomOrderFromList() {
+	public void testShouldReturnRandomOrderFromImmutableList() {
 		ImmutableList<String> listOutput = ShuffleUtility.retrieveRandomizedList(listInput);
+
+		//ToDo : en attendant un framework d'assertions comme fest
+		for (int i = 0; i < listInput.size(); i++) {
+			final int j = i;
+			Collection<String> testItem = Collections2.filter(listOutput, new Predicate<String>() {
+				@Override
+				public boolean apply(String s) {
+					if (listInput.get(j).equals(s)) return true;
+					return false;
+				}
+			});
+			assertThat(testItem.size(), equalTo(1));
+		}
+	}
+
+	@Test
+	public void testShouldReturnRandomOrderFromList() {
+		ArrayList<String> listInput2 = GenericTestingTools.createListOfPlayers();
+		List<String> listOutput = ShuffleUtility.retrieveRandomizedList(listInput2);
 
 		//ToDo : en attendant un framework d'assertions comme fest
 		for (int i = 0; i < listInput.size(); i++) {

@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import com.google.inject.Inject;
 import fr.zeus.straykbol.R;
+import fr.zeus.straykbol.ShuffleUtility;
 import fr.zeus.straykbol.tools.ActivityTools;
 import roboguice.activity.RoboActivity;
 import roboguice.inject.InjectView;
@@ -19,7 +20,6 @@ import java.util.ArrayList;
  */
 public class ShufflePlayersActivity extends RoboActivity {
 	public static final String LIST_NAME = "liste";
-	@Inject
 	ArrayList<String> players;
 	@InjectView(R.id.lblCurrentPlayer) private TextView lblCurrentPlayer;
 	@InjectView(R.id.lblTargetPlayer) private TextView lblTargetPlayer;
@@ -31,22 +31,18 @@ public class ShufflePlayersActivity extends RoboActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.shuffle_players_activity);
 
-		/*TextView lblCurrentPlayer = (TextView) findViewById(R.id.lblCurrentPlayer);
-		TextView lblTargetPlayer = (TextView) findViewById(R.id.lblTargetPlayer);
-		Button btnShowTarget = (Button) findViewById(R.id.btnShufflePlayersShowTarget);
-		Button btnShowNextPlayer = (Button) findViewById(R.id.btnShufflePlayersShowNextPlayer);*/
-
 		lblCurrentPlayer.setVisibility(View.VISIBLE);
 		lblTargetPlayer.setVisibility(View.INVISIBLE);
 		btnShowTarget.setVisibility(View.VISIBLE);
 		btnShowNextPlayer.setVisibility(View.INVISIBLE);
 
-		/*/players = ActivityTools.retrieveArrayListFromIntent(getIntent(), LIST_NAME);
+		players = ActivityTools.retrieveArrayListFromIntent(getIntent(), LIST_NAME);
+		players = (ArrayList) ShuffleUtility.retrieveRandomizedList(players);
 
 		if (players.size()> 0) {
 			lblCurrentPlayer.setText(players.get(0));
 			lblTargetPlayer.setText("");
-		}*/
+		}
 	}
 
 	public ArrayList<String> getPlayers() {
