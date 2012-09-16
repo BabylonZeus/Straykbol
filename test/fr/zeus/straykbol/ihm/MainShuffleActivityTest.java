@@ -9,6 +9,7 @@ import com.google.common.collect.ImmutableList;
 import com.xtremelabs.robolectric.RobolectricTestRunner;
 import com.xtremelabs.robolectric.shadows.ShadowIntent;
 import fr.zeus.straykbol.R;
+import fr.zeus.straykbol.tools.GenericTestingTools;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -42,13 +43,7 @@ public class MainShuffleActivityTest {
 		btnNewGame = (Button) activity.findViewById(R.id.btnShuffleLaunchNewGameActivity);
 		btnShuffleGame = (Button) activity.findViewById(R.id.btnShuffleLaunchShufflePlayersActivity);
 
-		ArrayList<String> listItems = new ArrayList<>();
-		listItems.add("Iluvatar");
-		listItems.add("Manwë");
-		listItems.add("Ulmo");
-		listItems.add("Yavanna");
-		listItems.add("Aulë");
-		listItems.add("Nienna");
+		ArrayList<String> listItems = GenericTestingTools.createListOfPlayers();
 		intent = new Intent();
 		intent.putStringArrayListExtra(MainShuffleActivity.LIST_NAME, listItems);
 	}

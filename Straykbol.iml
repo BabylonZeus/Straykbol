@@ -38,7 +38,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/res" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/target/generated-sources/r" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/gen" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target/classes" />
       <excludeFolder url="file://$MODULE_DIR$/target/generated-sources/combined-assets" />
@@ -69,6 +68,12 @@
     <orderEntry type="library" name="Maven: org.javassist:javassist:3.14.0-GA" level="project" />
     <orderEntry type="library" name="Maven: com.google.android:support-v4:r6" level="project" />
     <orderEntry type="library" name="Maven: com.jayway.android.robotium:robotium-solo:3.1" level="project" />
+    <orderEntry type="library" name="Maven: org.roboguice:roboguice:2.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.inject:guice:no_aop:3.0" level="project" />
+    <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
+    <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.inject.extensions:guice-multibindings:3.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.inject.extensions:guice-assistedinject:3.0" level="project" />
     <orderEntry type="jdk" jdkName="Android 2.3.3 Platform" jdkType="Android SDK" />
   </component>
 </module>
