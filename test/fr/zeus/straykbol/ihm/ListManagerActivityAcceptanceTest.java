@@ -12,6 +12,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.hamcrest.core.IsNot.not;
 
@@ -55,8 +56,26 @@ public class ListManagerActivityAcceptanceTest {
 		assertThat(activity.getListItems().size(), equalTo(1));
 	}
 
-/*    @Test
+    @Test
     public void shouldClickMenu_CreateItem_DeleteItem() {
+		assertThat(activity.getListItems().size(), equalTo(0));
+		assertThat(editTextId.getVisibility(), not(View.VISIBLE));
+		assertThat(activity.onOptionsItemSelected(new TestMenuItem(R.id.menuitem_list_manager_add_item)), equalTo(true));
+		assertThat(editTextId.hasFocus(), equalTo(true));
+		assertThat(editTextId.getVisibility(), equalTo(View.VISIBLE));
+		editTextId.setText("toto");
+		editTextId.onKeyUp(KeyEvent.KEYCODE_ENTER, new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_ENTER));
+		assertThat(editTextId.getVisibility(), not(View.VISIBLE));
+		assertThat(activity.getListItems().size(), equalTo(1));
 
-    }*/
+		assertThat(activity.onOptionsItemSelected(new TestMenuItem(R.id.menuitem_list_manager_delete_item)), equalTo(true));
+		assertThat(editTextId.getVisibility(), not(View.VISIBLE));
+		assertThat(activity.getListItems().size(), equalTo(0));
+	}
+
+	@Test
+	public void shouldFinishActivity_on_CreatingList() {
+		activity.onOptionsItemSelected(new TestMenuItem(R.id.menuitem_list_manager_create_list));
+		assertThat(activity.isFinishing(), is(true));
+	}
 }
