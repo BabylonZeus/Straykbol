@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="fr.zeus.straykbol"
-          android:versionCode="1"
-          android:versionName="1.0">
-    <uses-sdk android:minSdkVersion="10"/>
-    <application android:label="@string/app_name">
-        <activity android:name=".ihm.StraykbolActivity"
-                  android:label="@string/app_name"
-                  android:icon="@drawable/nuclear">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-        <activity android:icon="@drawable/nuclear"
-                  android:name=".ihm.MainShuffleActivity"
-                  android:label="@string/shuffle_activity_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity android:icon="@drawable/nuclear"
-                  android:name=".ihm.ShuffleNewGameActivity"
-                  android:label="@string/shuffle_newgame_activity_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity android:icon="@drawable/nuclear"
-                  android:name=".ihm.ListManagerActivity"
-                  android:label="@string/list_manager_activity_name">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-    </application>
+		  package="fr.zeus.straykbol"
+		  android:versionCode="1"
+		  android:versionName="1.0">
+	<uses-sdk android:minSdkVersion="10"/>
+	<application android:label="@string/app_name">
+		<activity android:name=".ihm.StraykbolActivity"
+				  android:label="@string/app_name"
+				  android:icon="@drawable/nuclear">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity android:icon="@drawable/nuclear"
+				  android:name=".ihm.MainShuffleActivity"
+				  android:label="@string/shuffle_activity_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+		</activity>
+		<activity android:icon="@drawable/nuclear"
+				  android:name=".ihm.ShuffleNewGameActivity"
+				  android:label="@string/shuffle_newgame_activity_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+		</activity>
+		<activity android:icon="@drawable/nuclear"
+				  android:name=".ihm.ListManagerActivity"
+				  android:label="@string/list_manager_activity_name">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+		</activity>
+	</application>
 </manifest> 

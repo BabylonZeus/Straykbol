@@ -16,45 +16,40 @@ import fr.zeus.straykbol.R;
  * Created by the mighty babylonzeus in all His wisdom and glory.
  */
 
-public class StraykbolActivity extends Activity
-{
+public class StraykbolActivity extends Activity {
 	static final private int MENU_ITEM = Menu.FIRST;
 
-    /** Called when the activity is first created. */
-    @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+	/**
+	 * Called when the activity is first created.
+	 */
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main);
 
-		Button b = (Button)findViewById(R.id.button);
-		b.setOnClickListener(new View.OnClickListener()
-		{
+		Button b = (Button) findViewById(R.id.button);
+		b.setOnClickListener(new View.OnClickListener() {
 			@Override
-			public void onClick(View view)
-			{
-				TextView tv = (TextView)findViewById(R.id.textview);
+			public void onClick(View view) {
+				TextView tv = (TextView) findViewById(R.id.textview);
 				tv.setText("Meuh");
 			}
 		});
 
-		Button shuffle = (Button)findViewById(R.id.btnShuffleLaunchActivity);
-		shuffle.setOnClickListener(new View.OnClickListener()
-		{
+		Button shuffle = (Button) findViewById(R.id.btnShuffleLaunchActivity);
+		shuffle.setOnClickListener(new View.OnClickListener() {
 			@Override
-			public void onClick(View view)
-			{
+			public void onClick(View view) {
 				Intent myIntent = new Intent(StraykbolActivity.this, MainShuffleActivity.class);
 				StraykbolActivity.this.startActivity(myIntent);
 
 			}
 		});
 
-    }
+	}
 
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu)
-	{
+	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
 		//Identifiant de groupe
 		int groupId = 0;
@@ -76,12 +71,10 @@ public class StraykbolActivity extends Activity
 	}
 
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item)
-	{
+	public boolean onOptionsItemSelected(MenuItem item) {
 		super.onOptionsItemSelected(item);
 		//Détermine quelle entrée de menu a été sélectionnée
-		switch (item.getItemId())
-		{
+		switch (item.getItemId()) {
 			case (Menu.NONE):
 				break;
 			case (MENU_ITEM):

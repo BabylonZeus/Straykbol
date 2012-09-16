@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-<TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="Hello Camarade, StraykbolActivity"
-    android:id="@+id/textview"
-    />
-    <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Test"
-            android:id="@+id/button" android:layout_gravity="center"/>
-    <TableLayout
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent" android:layout_gravity="left|center_vertical">
-        <TableRow
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
-        </TableRow>
-        <TableRow
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
-            <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tirages au sort"
-                    android:id="@+id/btnShuffleLaunchActivity" android:layout_column="0"/>
-        </TableRow>
-    </TableLayout>
+			  android:orientation="vertical"
+			  android:layout_width="fill_parent"
+			  android:layout_height="fill_parent"
+		>
+	<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="Hello Camarade, StraykbolActivity"
+			android:id="@+id/textview"
+			/>
+	<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Test"
+			android:id="@+id/button" android:layout_gravity="center"/>
+	<TableLayout
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent" android:layout_gravity="left|center_vertical">
+		<TableRow
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent">
+		</TableRow>
+		<TableRow
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent">
+			<Button
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Tirages au sort"
+					android:id="@+id/btnShuffleLaunchActivity" android:layout_column="0"/>
+		</TableRow>
+	</TableLayout>
 </LinearLayout>
 

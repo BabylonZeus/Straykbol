@@ -1,7 +1,6 @@
 package fr.zeus.straykbol.ihm;
 
 import android.widget.Button;
-import com.xtremelabs.robolectric.Robolectric;
 import com.xtremelabs.robolectric.RobolectricTestRunner;
 import com.xtremelabs.robolectric.shadows.ShadowIntent;
 import fr.zeus.straykbol.R;
@@ -18,17 +17,15 @@ import static org.junit.Assert.assertThat;
  * by the mighty babylonzeus in all His wisdom and glory.
  */
 @RunWith(RobolectricTestRunner.class)
-public class MainShuffleActivityTest
-{
+public class MainShuffleActivityTest {
 	private MainShuffleActivity activity;
 	private Button btnNewGame;
 
 	@Before
-	public void setUp() throws Exception
-	{
+	public void setUp() throws Exception {
 		activity = new MainShuffleActivity();
 		activity.onCreate(null);
-		btnNewGame = (Button)activity.findViewById(R.id.btnShuffleLaunchNewGameActivity);
+		btnNewGame = (Button) activity.findViewById(R.id.btnShuffleLaunchNewGameActivity);
 	}
 
 	@Test

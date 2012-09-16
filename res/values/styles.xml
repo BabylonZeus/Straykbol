@@ -1,16 +1,16 @@
 <!-- Generated with http://android-holo-colors.com -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-  <style name="ButtonStraykbolTheme" parent="android:Widget.Button">
-	  <item name="android:background">@drawable/btn_default_holo_dark</item>
-  </style>
+	<style name="ButtonStraykbolTheme" parent="android:Widget.Button">
+		<item name="android:background">@drawable/btn_default_holo_dark</item>
+	</style>
 
-  <style name="ImageButtonStraykbolTheme" parent="android:Widget.ImageButton">
-	  <item name="android:background">@drawable/btn_default_holo_dark</item>
-  </style>
+	<style name="ImageButtonStraykbolTheme" parent="android:Widget.ImageButton">
+		<item name="android:background">@drawable/btn_default_holo_dark</item>
+	</style>
 
-  <style name="ToggleStraykbolTheme" parent="android:Widget.Button.Toggle">
-      <item name="android:background">@drawable/btn_toggle_holo_dark</item>
-  </style>
+	<style name="ToggleStraykbolTheme" parent="android:Widget.Button.Toggle">
+		<item name="android:background">@drawable/btn_toggle_holo_dark</item>
+	</style>
 
 </resources>

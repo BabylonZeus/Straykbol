@@ -1,15 +1,11 @@
 package fr.zeus.straykbol.ihm;
 
-import android.view.MenuItem;
 import com.xtremelabs.robolectric.RobolectricTestRunner;
-import com.xtremelabs.robolectric.shadows.ShadowActivity;
-import com.xtremelabs.robolectric.tester.android.view.TestMenuItem;
 import fr.zeus.straykbol.R;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static com.xtremelabs.robolectric.Robolectric.shadowOf;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 
@@ -18,13 +14,11 @@ import static org.hamcrest.core.IsEqual.equalTo;
  * by the mighty babylonzeus in all His wisdom and glory.
  */
 @RunWith(RobolectricTestRunner.class)
-public class ShuffleNewGameActivityTest
-{
+public class ShuffleNewGameActivityTest {
 	private ShuffleNewGameActivity activity;
 
 	@Before
-	public void setUp() throws Exception
-	{
+	public void setUp() throws Exception {
 		activity = new ShuffleNewGameActivity();
 		activity.onCreate(null);
 	}

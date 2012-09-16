@@ -9,18 +9,17 @@ import android.database.sqlite.SQLiteDatabase;
  * Created on 03/09/2012 9:48 PM with IntelliJ IDEA,
  * by the mighty babylonzeus in all His wisdom and glory.
  */
-public class UserAdapter
-{
+public class UserAdapter {
 	private UserOpenHelper dbHelper;
 	private SQLiteDatabase db;
 
 	private Context context;
 
-	public UserAdapter(Context c){
+	public UserAdapter(Context c) {
 		context = c;
 	}
 
-	public void close(){
+	public void close() {
 		dbHelper.close();
 	}
 
@@ -30,8 +29,7 @@ public class UserAdapter
 		return this;
 	}
 
-	public long addUser(String name, String firstname, String nickname)
-	{
+	public long addUser(String name, String firstname, String nickname) {
 		ContentValues content = new ContentValues();
 		content.put("name", name);
 		content.put("firstname", firstname);
@@ -39,9 +37,8 @@ public class UserAdapter
 		return db.insert("users", null, content);
 	}
 
-	public Integer getUserId(String name, String firstname, String nickname)
-	{
-		Cursor c = db.query(true, "users", new String[] {"id"}, "name=\""+name+"\"", null, null, null, null, null);
+	public Integer getUserId(String name, String firstname, String nickname) {
+		Cursor c = db.query(true, "users", new String[]{"id"}, "name=\"" + name + "\"", null, null, null, null, null);
 		if (c.getCount() > 1) {
 			return -1;
 		}
@@ -49,9 +46,8 @@ public class UserAdapter
 		return Integer.valueOf(c.getString(0));
 	}
 
-	public String getNameFromId(Integer id)
-	{
-		Cursor c = db.query(true, "users", new String[] {"name"}, "id="+id+"", null, null, null, null, null);
+	public String getNameFromId(Integer id) {
+		Cursor c = db.query(true, "users", new String[]{"name"}, "id=" + id + "", null, null, null, null, null);
 		if (c.getCount() > 1) {
 			return null;
 		}

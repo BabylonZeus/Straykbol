@@ -1,14 +1,12 @@
 package fr.zeus.straykbol.db;
 
 import android.test.AndroidTestCase;
-import fr.zeus.straykbol.db.UserAdapter;
 
 /**
  * Created on 03/09/2012 9:41 PM with IntelliJ IDEA,
  * by the mighty babylonzeus in all His wisdom and glory.
  */
-public class UserAdapterTest extends AndroidTestCase
-{
+public class UserAdapterTest extends AndroidTestCase {
 	public static final String SAMPLE_NAME = "Name of marmotte";
 	public static final String SAMPLE_FIRSTNAME = "Firstname of marmotte";
 	public static final String SAMPLE_NICKNAME = "Marmotte";

@@ -15,9 +15,9 @@ import fr.zeus.straykbol.ihm.StraykbolActivity;
  */
 public class StraykbolActivityTest_AndroidMethod extends ActivityInstrumentationTestCase2<StraykbolActivity> {
 
-    public StraykbolActivityTest_AndroidMethod() {
-        super("fr.zeus.straykbol", StraykbolActivity.class);
-    }
+	public StraykbolActivityTest_AndroidMethod() {
+		super("fr.zeus.straykbol", StraykbolActivity.class);
+	}
 
 	public void testToto() {
 		assertTrue(true);

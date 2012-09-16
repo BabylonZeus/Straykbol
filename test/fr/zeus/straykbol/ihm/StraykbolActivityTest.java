@@ -20,8 +20,7 @@ import static org.junit.Assert.assertThat;
  * by the mighty babylonzeus in all His wisdom and glory.
  */
 @RunWith(RobolectricTestRunner.class)
-public class StraykbolActivityTest
-{
+public class StraykbolActivityTest {
 	private StraykbolActivity activity;
 
 	private Button pressMeButton;

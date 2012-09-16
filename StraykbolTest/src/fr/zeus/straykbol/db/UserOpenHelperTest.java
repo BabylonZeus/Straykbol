@@ -4,7 +4,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.test.AndroidTestCase;
-import fr.zeus.straykbol.db.UserOpenHelper;
 
 /**
  * Created on 31/08/2012 12:02 AM with IntelliJ IDEA,
