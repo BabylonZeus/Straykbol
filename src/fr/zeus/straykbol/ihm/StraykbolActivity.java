@@ -11,13 +11,18 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import fr.zeus.straykbol.R;
+import roboguice.activity.RoboActivity;
+import roboguice.inject.InjectView;
 
 /**
  * Created by the mighty babylonzeus in all His wisdom and glory.
  */
 
-public class StraykbolActivity extends Activity {
+public class StraykbolActivity extends RoboActivity {
 	static final private int MENU_ITEM = Menu.FIRST;
+
+	@InjectView(R.id.button) private Button b;
+	@InjectView(R.id.btnShuffleLaunchActivity) private Button shuffle;
 
 	/**
 	 * Called when the activity is first created.
@@ -27,7 +32,6 @@ public class StraykbolActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
-		Button b = (Button) findViewById(R.id.button);
 		b.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
@@ -36,7 +40,6 @@ public class StraykbolActivity extends Activity {
 			}
 		});
 
-		Button shuffle = (Button) findViewById(R.id.btnShuffleLaunchActivity);
 		shuffle.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {

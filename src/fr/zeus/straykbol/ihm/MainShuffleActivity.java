@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import fr.zeus.straykbol.R;
+import roboguice.activity.RoboActivity;
+import roboguice.inject.InjectView;
 
 import java.util.ArrayList;
 
@@ -17,9 +19,15 @@ import static android.widget.Toast.makeText;
  * Created on 06/09/2012 10:31 PM with IntelliJ IDEA,
  * by the mighty babylonzeus in all His wisdom and glory.
  */
-public class MainShuffleActivity extends Activity {
+public class MainShuffleActivity extends RoboActivity {
 	public static final int REQUEST_LIST_MANAGER = 0;
 	public static final String LIST_NAME = "liste";
+
+	@InjectView(R.id.btnShuffleLaunchNewGameActivity) private Button btnNewGame;
+	@InjectView(R.id.btnShuffleLaunchShufflePlayersActivity) private Button btnShufflePlayers;
+	@InjectView(R.id.btnShufflePopulateDefaultPlayers) private Button btnDefaultPlayers;
+	@InjectView(R.id.txtShuffleLaunchPlayerManagementActivityListPlayers) private TextView txtPlayers;
+
 	ArrayList players;
 
 	@Override
@@ -29,8 +37,7 @@ public class MainShuffleActivity extends Activity {
 
 		setShuffleButtonState();
 
-		Button newgame = (Button) findViewById(R.id.btnShuffleLaunchNewGameActivity);
-		newgame.setOnClickListener(new View.OnClickListener() {
+		btnNewGame.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
 				Intent myIntent = new Intent(MainShuffleActivity.this, ShuffleNewGameActivity.class);
@@ -41,23 +48,20 @@ public class MainShuffleActivity extends Activity {
 			}
 		});
 
-		Button shuffleplayers = (Button) findViewById(R.id.btnShuffleLaunchShufflePlayersActivity);
-		shuffleplayers.setOnClickListener(new View.OnClickListener() {
+		btnShufflePlayers.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
 				if (players != null && players.size() > 0) {
 					Intent myIntent = new Intent(MainShuffleActivity.this, ShufflePlayersActivity.class);
 					myIntent.putStringArrayListExtra(LIST_NAME, players);
 					MainShuffleActivity.this.startActivityForResult(myIntent, REQUEST_LIST_MANAGER);
-				}
-				else {
+				} else {
 					Toast.makeText(MainShuffleActivity.this, R.string.shuffle_players_empty_message, Toast.LENGTH_LONG).show();
 				}
 			}
 		});
 
-		Button defaultplayers = (Button) findViewById(R.id.btnShufflePopulateDefaultPlayers);
-		defaultplayers.setOnClickListener(new View.OnClickListener() {
+		btnDefaultPlayers.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
 				populateInitialPlayers();
@@ -90,7 +94,6 @@ public class MainShuffleActivity extends Activity {
 	}
 
 	private void updatePlayersList() {
-		TextView txtPlayers = (TextView) findViewById(R.id.txtShuffleLaunchPlayerManagementActivityListPlayers);
 		if (players == null || players.size() == 0) {
 			txtPlayers.setText("Aucune partie en cours");
 		}
@@ -100,12 +103,11 @@ public class MainShuffleActivity extends Activity {
 	}
 
 	private void setShuffleButtonState() {
-		Button shuffle = (Button) findViewById(R.id.btnShuffleLaunchShufflePlayersActivity);
 		if (players == null || players.size() == 0) {
-			shuffle.setVisibility(View.INVISIBLE);
+			btnShufflePlayers.setVisibility(View.INVISIBLE);
 		}
 		else {
-			shuffle.setVisibility(View.VISIBLE);
+			btnShufflePlayers.setVisibility(View.VISIBLE);
 		}
 	}
 

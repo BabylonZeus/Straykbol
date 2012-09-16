@@ -10,15 +10,18 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import fr.zeus.straykbol.R;
+import fr.zeus.straykbol.tools.ActivityTools;
+import roboguice.activity.RoboActivity;
+import roboguice.inject.InjectView;
 
 import java.util.ArrayList;
 
-public class ListManagerActivity extends Activity {
+public class ListManagerActivity extends RoboActivity {
 	public static final String LIST_NAME = "liste";
 	protected boolean addingNew = false;
 	protected ArrayList<String> listItems;
-	protected ListView visualListView;
-	protected EditText visualEditText;
+	@InjectView(R.id.lstListManagerActivity) protected ListView visualListView;
+	@InjectView(R.id.txtListManagerActivityAdd) protected EditText visualEditText;
 	protected ArrayAdapter<String> aa;
 	private int menuToInflate;
 	private int contextMenuToInflate;
@@ -31,17 +34,7 @@ public class ListManagerActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.list_manager_activity);
 
-		visualListView = (ListView) findViewById(R.id.lstListManagerActivity);
-		visualEditText = (EditText) findViewById(R.id.txtListManagerActivityAdd);
-
-		Intent fromIntent = getIntent();
-		if (fromIntent != null
-				&& fromIntent.getStringArrayListExtra(LIST_NAME) != null
-				&& fromIntent.getStringArrayListExtra(LIST_NAME).size() > 0) {
-			listItems = fromIntent.getStringArrayListExtra(LIST_NAME);
-		} else {
-			listItems = new ArrayList<>();
-		}
+		listItems = ActivityTools.retrieveArrayListFromIntent(getIntent(), LIST_NAME);
 		int resID = R.layout.list_manager_item;
 		aa = new ArrayAdapter<>(this, resID, listItems);
 		visualListView.setAdapter(aa);
