@@ -24,17 +24,7 @@
     </option>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b4bb53f-85a6-4b72-bd69-28477c05cf78" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Straykbol.iml" afterPath="$PROJECT_DIR$/Straykbol.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fr/zeus/straykbol/ihm/ListManagerActivity.java" afterPath="$PROJECT_DIR$/src/fr/zeus/straykbol/ihm/ListManagerActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fr/zeus/straykbol/ihm/MainShuffleActivity.java" afterPath="$PROJECT_DIR$/src/fr/zeus/straykbol/ihm/MainShuffleActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fr/zeus/straykbol/ihm/ShufflePlayersActivity.java" afterPath="$PROJECT_DIR$/src/fr/zeus/straykbol/ihm/ShufflePlayersActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fr/zeus/straykbol/ihm/StraykbolActivity.java" afterPath="$PROJECT_DIR$/src/fr/zeus/straykbol/ihm/StraykbolActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fr/zeus/straykbol/ihm/MainShuffleActivityTest.java" afterPath="$PROJECT_DIR$/test/fr/zeus/straykbol/ihm/MainShuffleActivityTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fr/zeus/straykbol/ihm/ShufflePlayersActivityTest.java" afterPath="$PROJECT_DIR$/test/fr/zeus/straykbol/ihm/ShufflePlayersActivityTest.java" />
-    </list>
+    <list default="true" id="5b4bb53f-85a6-4b72-bd69-28477c05cf78" name="Default" comment="" />
     <ignored path="Straykbol.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -140,7 +130,7 @@
       <file leaf-file-name="ListManagerActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fr/zeus/straykbol/ihm/ListManagerActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="53" selection-start="537" selection-end="549" vertical-scroll-proportion="0.13765182">
+            <state line="28" column="7" selection-start="940" selection-end="940" vertical-scroll-proportion="0.48178136">
               <folding />
             </state>
           </provider>
@@ -727,7 +717,7 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Android Application.Straykbol">
+  <component name="RunManager" selected="JUnit.All in Straykbol">
     <configuration default="false" name="MainShuffleActivityTest" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Straykbol" />
@@ -1163,7 +1153,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1182,7 +1172,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.67058825" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32737613" sideWeight="0.66190475" order="1" side_tool="false" content_ui="combo" x="459" y="254" width="364" height="356" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33809525" sideWeight="0.7912266" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33809525" sideWeight="0.7912266" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33225283" sideWeight="0.6013289" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.67058825" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -1386,7 +1376,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/zeus/straykbol/ihm/ListManagerActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="53" selection-start="537" selection-end="549" vertical-scroll-proportion="0.13765182">
+        <state line="28" column="7" selection-start="940" selection-end="940" vertical-scroll-proportion="0.48178136">
           <folding />
         </state>
       </provider>
