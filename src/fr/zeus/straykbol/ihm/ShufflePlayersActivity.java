@@ -1,11 +1,11 @@
 package fr.zeus.straykbol.ihm;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import com.google.inject.Inject;
+import android.widget.Toast;
+import com.google.common.collect.ImmutableList;
 import fr.zeus.straykbol.R;
 import fr.zeus.straykbol.ShuffleUtility;
 import fr.zeus.straykbol.tools.ActivityTools;
@@ -20,7 +20,9 @@ import java.util.ArrayList;
  */
 public class ShufflePlayersActivity extends RoboActivity {
 	public static final String LIST_NAME = "liste";
-	ArrayList<String> players;
+	private ArrayList<String> playersArbitrary;
+	private ImmutableList<String> playersRandom;
+
 	@InjectView(R.id.lblCurrentPlayer) private TextView lblCurrentPlayer;
 	@InjectView(R.id.lblTargetPlayer) private TextView lblTargetPlayer;
 	@InjectView(R.id.btnShufflePlayersShowTarget) private Button btnShowTarget;
@@ -36,16 +38,46 @@ public class ShufflePlayersActivity extends RoboActivity {
 		btnShowTarget.setVisibility(View.VISIBLE);
 		btnShowNextPlayer.setVisibility(View.INVISIBLE);
 
-		players = ActivityTools.retrieveArrayListFromIntent(getIntent(), LIST_NAME);
-		players = (ArrayList) ShuffleUtility.retrieveRandomizedList(players);
+		playersArbitrary = ActivityTools.retrieveArrayListFromIntent(getIntent(), LIST_NAME);
+		playersRandom = ShuffleUtility.retrieveRandomizedList(playersArbitrary);
 
-		if (players.size()> 0) {
-			lblCurrentPlayer.setText(players.get(0));
+		if (playersArbitrary.size()> 0) {
+			lblCurrentPlayer.setText(playersArbitrary.get(0));
 			lblTargetPlayer.setText("");
 		}
+
+		btnShowTarget.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				if (playersArbitrary != null && playersArbitrary.size() > 0) {
+					lblCurrentPlayer.setVisibility(View.VISIBLE);
+					lblTargetPlayer.setVisibility(View.VISIBLE);
+					btnShowTarget.setVisibility(View.INVISIBLE);
+					btnShowNextPlayer.setVisibility(View.VISIBLE);
+				}
+				else {
+					Toast.makeText(ShufflePlayersActivity.this, R.string.shuffle_players_empty_message, Toast.LENGTH_LONG).show();
+				}
+			}
+		});
+
+		btnShowNextPlayer.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				if (playersArbitrary != null && playersArbitrary.size() > 0) {
+					lblCurrentPlayer.setVisibility(View.VISIBLE);
+					lblTargetPlayer.setVisibility(View.INVISIBLE);
+					btnShowTarget.setVisibility(View.VISIBLE);
+					btnShowNextPlayer.setVisibility(View.INVISIBLE);
+				}
+				else {
+					Toast.makeText(ShufflePlayersActivity.this, R.string.shuffle_players_empty_message, Toast.LENGTH_LONG).show();
+				}
+			}
+		});
 	}
 
-	public ArrayList<String> getPlayers() {
-		return players;
+	public ArrayList<String> getPlayersArbitrary() {
+		return playersArbitrary;
 	}
 }

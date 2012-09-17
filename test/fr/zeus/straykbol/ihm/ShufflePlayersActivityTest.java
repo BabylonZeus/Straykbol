@@ -1,14 +1,9 @@
 package fr.zeus.straykbol.ihm;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import com.xtremelabs.robolectric.Robolectric;
 import com.xtremelabs.robolectric.RobolectricTestRunner;
-import com.xtremelabs.robolectric.shadows.ShadowActivity;
-import com.xtremelabs.robolectric.shadows.ShadowIntent;
 import fr.zeus.straykbol.R;
 import fr.zeus.straykbol.tools.ActivityTools;
 import fr.zeus.straykbol.tools.GenericTestingTools;
@@ -37,24 +32,44 @@ public class ShufflePlayersActivityTest {
 	@Before
 	public void setUp() throws Exception {
 		activity = new ShufflePlayersActivity();
+		activity.setIntent(ActivityTools.retrieveIntentFromArrayList(GenericTestingTools.createListOfPlayers(), LIST_NAME));
 		activity.onCreate(null);
 		lblCurrentPlayer = (TextView) activity.findViewById(R.id.lblCurrentPlayer);
 		lblTargetPlayer = (TextView) activity.findViewById(R.id.lblTargetPlayer);
 		btnShowTarget = (Button) activity.findViewById(R.id.btnShufflePlayersShowTarget);
 		btnShowNextPlayer = (Button) activity.findViewById(R.id.btnShufflePlayersShowNextPlayer);
 	}
+
 	@Test
-	public void shouldShowCorrectIHMOnStart() {
+	public void shouldShowCorrectIHMOnStart_StateE1() {
 		assertThat(lblCurrentPlayer.getVisibility(), is(View.VISIBLE));
 		assertThat(lblTargetPlayer.getVisibility(), not(View.VISIBLE));
 		assertThat(btnShowTarget.getVisibility(), is(View.VISIBLE));
 		assertThat(btnShowNextPlayer.getVisibility(), not(View.VISIBLE));
 
-		//ToDo : injecter une liste de 6 dans players et tester le changement des lbl et txt
-		/*ShadowIntent shIntent = Robolectric.shadowOf(new Intent());
-		shIntent.setClass(ShufflePlayersActivity.class, ShufflePlayersActivity.class);
-		ShadowActivity shActivity = Robolectric.shadowOf(new Activity()).startActivity();
-		activity.setIntent(ActivityTools.retrieveIntentFromArrayList(GenericTestingTools.createListOfPlayers(), LIST_NAME));
-		assertThat(activity.getPlayers().size(), is(6));*/
+		assertThat(activity.getPlayersArbitrary().size(), is(6));
+	}
+
+	@Test
+	public void shouldShowTarget_ActionA1_StateE2() {
+		assertThat(btnShowTarget.performClick(), is(true));
+
+		assertThat(lblCurrentPlayer.getVisibility(), is(View.VISIBLE));
+		assertThat(lblTargetPlayer.getVisibility(), is(View.VISIBLE));
+		assertThat(btnShowTarget.getVisibility(), not(View.VISIBLE));
+		assertThat(btnShowNextPlayer.getVisibility(), is(View.VISIBLE));
+
+	}
+
+	@Test
+	public void shouldShowNextPlayer_ActionA2_StateE1() {
+		btnShowTarget.performClick();
+		assertThat(btnShowNextPlayer.performClick(), is(true));
+
+		assertThat(lblCurrentPlayer.getVisibility(), is(View.VISIBLE));
+		assertThat(lblTargetPlayer.getVisibility(), not(View.VISIBLE));
+		assertThat(btnShowTarget.getVisibility(), is(View.VISIBLE));
+		assertThat(btnShowNextPlayer.getVisibility(), not(View.VISIBLE));
+
 	}
 }
