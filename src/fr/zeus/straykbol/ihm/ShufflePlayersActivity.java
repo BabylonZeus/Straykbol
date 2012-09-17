@@ -14,6 +14,8 @@ import roboguice.inject.InjectView;
 
 import java.util.ArrayList;
 
+import static android.widget.Toast.makeText;
+
 /**
  * Created on 16/09/12 15:24 with IntelliJ IDEA,
  * by the venerable Kosh in all His wisdom and glory.
@@ -22,6 +24,7 @@ public class ShufflePlayersActivity extends RoboActivity {
 	public static final String LIST_NAME = "liste";
 	private ArrayList<String> playersArbitrary;
 	private ImmutableList<String> playersRandom;
+	private Integer currentPlayer;
 
 	@InjectView(R.id.lblCurrentPlayer) private TextView lblCurrentPlayer;
 	@InjectView(R.id.lblTargetPlayer) private TextView lblTargetPlayer;
@@ -32,6 +35,7 @@ public class ShufflePlayersActivity extends RoboActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.shuffle_players_activity);
+		currentPlayer = 0;
 
 		lblCurrentPlayer.setVisibility(View.VISIBLE);
 		lblTargetPlayer.setVisibility(View.INVISIBLE);
@@ -54,9 +58,10 @@ public class ShufflePlayersActivity extends RoboActivity {
 					lblTargetPlayer.setVisibility(View.VISIBLE);
 					btnShowTarget.setVisibility(View.INVISIBLE);
 					btnShowNextPlayer.setVisibility(View.VISIBLE);
+					lblTargetPlayer.setText(ShuffleUtility.findNextElement(playersRandom, playersArbitrary.get(currentPlayer)));
 				}
 				else {
-					Toast.makeText(ShufflePlayersActivity.this, R.string.shuffle_players_empty_message, Toast.LENGTH_LONG).show();
+					makeText(ShufflePlayersActivity.this, R.string.shuffle_players_empty_message, Toast.LENGTH_LONG).show();
 				}
 			}
 		});
@@ -69,9 +74,10 @@ public class ShufflePlayersActivity extends RoboActivity {
 					lblTargetPlayer.setVisibility(View.INVISIBLE);
 					btnShowTarget.setVisibility(View.VISIBLE);
 					btnShowNextPlayer.setVisibility(View.INVISIBLE);
+					currentPlayer++;
 				}
 				else {
-					Toast.makeText(ShufflePlayersActivity.this, R.string.shuffle_players_empty_message, Toast.LENGTH_LONG).show();
+					makeText(ShufflePlayersActivity.this, R.string.shuffle_players_empty_message, Toast.LENGTH_LONG).show();
 				}
 			}
 		});
@@ -80,4 +86,15 @@ public class ShufflePlayersActivity extends RoboActivity {
 	public ArrayList<String> getPlayersArbitrary() {
 		return playersArbitrary;
 	}
+
+	public ImmutableList<String> getPlayersRandom()
+	{
+		return playersRandom;
+	}
+
+	public Integer getCurrentPlayer()
+	{
+		return currentPlayer;
+	}
+
 }

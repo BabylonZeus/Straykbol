@@ -5,6 +5,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import com.xtremelabs.robolectric.RobolectricTestRunner;
 import fr.zeus.straykbol.R;
+import fr.zeus.straykbol.ShuffleUtility;
 import fr.zeus.straykbol.tools.ActivityTools;
 import fr.zeus.straykbol.tools.GenericTestingTools;
 import org.junit.Before;
@@ -48,23 +49,30 @@ public class ShufflePlayersActivityTest {
 		assertThat(btnShowNextPlayer.getVisibility(), not(View.VISIBLE));
 
 		assertThat(activity.getPlayersArbitrary().size(), is(6));
+		assertThat(activity.getCurrentPlayer(), is(0));
+
+		assertThat(lblCurrentPlayer.getText().toString(), is("Iluvatar"));
 	}
 
 	@Test
 	public void shouldShowTarget_ActionA1_StateE2() {
 		assertThat(btnShowTarget.performClick(), is(true));
+		assertThat(activity.getCurrentPlayer(), is(0));
 
 		assertThat(lblCurrentPlayer.getVisibility(), is(View.VISIBLE));
 		assertThat(lblTargetPlayer.getVisibility(), is(View.VISIBLE));
 		assertThat(btnShowTarget.getVisibility(), not(View.VISIBLE));
 		assertThat(btnShowNextPlayer.getVisibility(), is(View.VISIBLE));
 
+		assertThat(lblCurrentPlayer.getText().toString(), is("Iluvatar"));
+		assertThat(lblTargetPlayer.getText().toString(), is(ShuffleUtility.findNextElement(activity.getPlayersRandom(), "Iluvatar")));
 	}
 
 	@Test
 	public void shouldShowNextPlayer_ActionA2_StateE1() {
 		btnShowTarget.performClick();
 		assertThat(btnShowNextPlayer.performClick(), is(true));
+		assertThat(activity.getCurrentPlayer(), is(1));
 
 		assertThat(lblCurrentPlayer.getVisibility(), is(View.VISIBLE));
 		assertThat(lblTargetPlayer.getVisibility(), not(View.VISIBLE));
