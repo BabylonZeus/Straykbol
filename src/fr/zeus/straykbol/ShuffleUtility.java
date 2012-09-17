@@ -25,7 +25,7 @@ public class ShuffleUtility {
 		return new ImmutableList.Builder<String>().addAll(listOutput).build();
 	}
 
-	public static List<String> retrieveRandomizedList(List<String> listInput) {
+	public static ImmutableList<String> retrieveRandomizedList(List<String> listInput) {
 		List<String> listOutput = new ArrayList<>();
 		listOutput.addAll(listInput);
 
@@ -35,6 +35,6 @@ public class ShuffleUtility {
 			int j = rnd.nextInt(i + 1);
 			Collections.swap(listOutput, i, j);
 		}
-		return listOutput;
+		return ImmutableList.copyOf(listOutput);
 	}
 }

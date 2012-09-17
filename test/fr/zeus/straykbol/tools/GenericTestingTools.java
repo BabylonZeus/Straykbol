@@ -1,7 +1,6 @@
 package fr.zeus.straykbol.tools;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created on 16/09/12 18:01 with IntelliJ IDEA,
