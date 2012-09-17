@@ -11,8 +11,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import static com.google.common.collect.Collections2.filter;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.hamcrest.core.IsNull.notNullValue;
+import static org.hamcrest.core.StringContains.containsString;
 import static org.junit.Assert.assertThat;
 
 /**
@@ -41,9 +43,11 @@ public class ShuffleUtilityTest {
 		//ToDo : en attendant un framework d'assertions comme fest
 		for (int i = 0; i < listInput.size(); i++) {
 			final int j = i;
-			Collection<String> testItem = Collections2.filter(listOutput, new Predicate<String>() {
+			Collection<String> testItem = filter(listOutput, new Predicate<String>()
+			{
 				@Override
-				public boolean apply(String s) {
+				public boolean apply(String s)
+				{
 					if (listInput.get(j).equals(s)) return true;
 					return false;
 				}
@@ -60,15 +64,33 @@ public class ShuffleUtilityTest {
 		//ToDo : en attendant un framework d'assertions comme fest
 		for (int i = 0; i < listInput.size(); i++) {
 			final int j = i;
-			Collection<String> testItem = Collections2.filter(listOutput, new Predicate<String>() {
+			Collection<String> testItem = filter(listOutput, new Predicate<String>()
+			{
 				@Override
-				public boolean apply(String s) {
+				public boolean apply(String s)
+				{
 					if (listInput.get(j).equals(s)) return true;
 					return false;
 				}
 			});
 			assertThat(testItem.size(), equalTo(1));
 		}
+	}
+
+	@Test
+	public void shouldReturnNextElementCircularly() {
+		ArrayList<String> list = GenericTestingTools.createListOfPlayers();
+		assertThat(ShuffleUtility.findNextElement(list, "Iluvatar"), containsString("Manwë"));
+		assertThat(ShuffleUtility.findNextElement(list, "Manwë"), containsString("Ulmo"));
+		assertThat(ShuffleUtility.findNextElement(list, "Nienna"), containsString("Iluvatar"));
+		assertThat(ShuffleUtility.findNextElement(list, "toto"), containsString(""));
+
+		list = new ArrayList<>();
+		assertThat(ShuffleUtility.findNextElement(list, "Iluvatar"), containsString(""));
+
+		list.add("Iluvatar");
+		assertThat(ShuffleUtility.findNextElement(list, "Iluvatar"), containsString("Iluvatar"));
+
 	}
 
 }
