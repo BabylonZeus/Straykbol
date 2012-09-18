@@ -1,4 +1,4 @@
-package fr.zeus.straykbol.ihm;
+package fr.zeus.straykbol.ihm.utilities;
 
 import android.content.Intent;
 import android.os.Bundle;

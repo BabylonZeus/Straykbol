@@ -1,7 +1,8 @@
-package fr.zeus.straykbol.ihm;
+package fr.zeus.straykbol.ihm.utilities;
 
 import com.xtremelabs.robolectric.RobolectricTestRunner;
 import fr.zeus.straykbol.R;
+import fr.zeus.straykbol.ihm.utilities.ListManagerActivity;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

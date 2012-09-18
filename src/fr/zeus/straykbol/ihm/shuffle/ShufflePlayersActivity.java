@@ -1,4 +1,4 @@
-package fr.zeus.straykbol.ihm;
+package fr.zeus.straykbol.ihm.shuffle;
 
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +8,7 @@ import android.widget.Toast;
 import com.google.common.collect.ImmutableList;
 import fr.zeus.straykbol.R;
 import fr.zeus.straykbol.ShuffleUtility;
+import fr.zeus.straykbol.ihm.StraykbolActivity;
 import fr.zeus.straykbol.tools.ActivityTools;
 import roboguice.activity.RoboActivity;
 import roboguice.inject.InjectView;

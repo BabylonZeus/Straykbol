@@ -1,4 +1,4 @@
-package fr.zeus.straykbol.ihm;
+package fr.zeus.straykbol.ihm.shuffle;
 
 import android.app.Activity;
 import android.content.Intent;

@@ -1,4 +1,4 @@
-package fr.zeus.straykbol.ihm;
+package fr.zeus.straykbol.ihm.shuffle;
 
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -6,12 +6,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import fr.zeus.straykbol.R;
+import fr.zeus.straykbol.ihm.ListManagerActivity;
 
 /**
  * Created on 08/09/2012 10:39 PM with IntelliJ IDEA,
  * by the mighty babylonzeus in all His wisdom and glory.
  */
-public class ShuffleNewGameActivity extends ListManagerActivity {
+public class ShuffleNewGameActivity extends ListManagerActivity
+{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

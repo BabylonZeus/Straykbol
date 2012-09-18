@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 		  package="fr.zeus.straykbol"
-		  android:versionCode="1"
-		  android:versionName="0.1">
+		  android:versionCode="2"
+		  android:versionName="0.2-SNAPSHOT">
 	<uses-sdk android:minSdkVersion="10"/>
 	<application android:label="@string/app_name">
 		<activity android:name=".ihm.StraykbolActivity"
@@ -14,7 +14,7 @@
 			</intent-filter>
 		</activity>
 		<activity android:icon="@drawable/nuclear"
-				  android:name=".ihm.MainShuffleActivity"
+				  android:name=".ihm.shuffle.MainShuffleActivity"
 				  android:label="@string/shuffle_activity_name">
 			<intent-filter>
 				<action android:name="android.intent.action.VIEW"/>
@@ -22,7 +22,7 @@
 			</intent-filter>
 		</activity>
 		<activity android:icon="@drawable/nuclear"
-				  android:name=".ihm.ShuffleNewGameActivity"
+				  android:name=".ihm.shuffle.ShuffleNewGameActivity"
 				  android:label="@string/shuffle_newgame_activity_name">
 			<intent-filter>
 				<action android:name="android.intent.action.VIEW"/>
@@ -30,7 +30,7 @@
 			</intent-filter>
 		</activity>
 		<activity android:icon="@drawable/nuclear"
-				  android:name=".ihm.ListManagerActivity"
+				  android:name=".ihm.utilities.ListManagerActivity"
 				  android:label="@string/list_manager_activity_name">
 			<intent-filter>
 				<action android:name="android.intent.action.VIEW"/>
@@ -38,7 +38,7 @@
 			</intent-filter>
 		</activity>
         <activity android:icon="@drawable/nuclear"
-                  android:name=".ihm.ShufflePlayersActivity"
+                  android:name=".ihm.shuffle.ShufflePlayersActivity"
                   android:label="@string/shuffle_players_activity_name">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>

@@ -1,7 +1,8 @@
-package fr.zeus.straykbol.ihm;
+package fr.zeus.straykbol.ihm.shuffle;
 
 import com.xtremelabs.robolectric.RobolectricTestRunner;
 import fr.zeus.straykbol.R;
+import fr.zeus.straykbol.ihm.shuffle.ShuffleNewGameActivity;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

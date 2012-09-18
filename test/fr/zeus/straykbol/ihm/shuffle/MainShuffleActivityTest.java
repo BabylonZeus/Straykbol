@@ -1,4 +1,4 @@
-package fr.zeus.straykbol.ihm;
+package fr.zeus.straykbol.ihm.shuffle;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,6 +7,9 @@ import android.widget.Button;
 import com.xtremelabs.robolectric.RobolectricTestRunner;
 import com.xtremelabs.robolectric.shadows.ShadowIntent;
 import fr.zeus.straykbol.R;
+import fr.zeus.straykbol.ihm.shuffle.MainShuffleActivity;
+import fr.zeus.straykbol.ihm.shuffle.ShuffleNewGameActivity;
+import fr.zeus.straykbol.ihm.shuffle.ShufflePlayersActivity;
 import fr.zeus.straykbol.tools.GenericTestingTools;
 import org.junit.Before;
 import org.junit.Test;

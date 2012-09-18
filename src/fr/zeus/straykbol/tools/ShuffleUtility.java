@@ -1,4 +1,4 @@
-package fr.zeus.straykbol;
+package fr.zeus.straykbol.tools;
 
 import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
