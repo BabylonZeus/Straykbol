@@ -2,6 +2,10 @@
 <resources>
 	<string name="app_name">Straykbol</string>
 
+    <string name="about_activity_name">A propos de</string>
+    <string name="menu_name_main">Menu</string>
+    <string name="menuitem_about_main">A propos de</string>
+
 	<string name="menu_item_reset">Reset Bearing</string>
 	<string name="submenu_item">Sous-Toto</string>
 	<string name="submenu_entry">Toto 1</string>

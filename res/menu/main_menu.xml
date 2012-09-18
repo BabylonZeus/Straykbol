@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	  android:name="@string/menu_name_main">
+	<item
+			android:id="@+id/menuitem_about_main"
+			android:icon="@drawable/plus"
+			android:title="@string/menuitem_about_main"
+			android:alphabeticShortcut="a">
+	</item>
+</menu>

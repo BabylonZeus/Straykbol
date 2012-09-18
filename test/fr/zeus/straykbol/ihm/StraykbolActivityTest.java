@@ -23,7 +23,6 @@ import static org.junit.Assert.assertThat;
 public class StraykbolActivityTest {
 	private StraykbolActivity activity;
 
-	private Button pressMeButton;
 	private TextView results;
 
 	private Button btnShuffleLaunchActivity;
@@ -33,17 +32,9 @@ public class StraykbolActivityTest {
 		activity = new StraykbolActivity();
 		activity.onCreate(null);
 
-		pressMeButton = (Button) activity.findViewById(R.id.button);
 		results = (TextView) activity.findViewById(R.id.textview);
 
 		btnShuffleLaunchActivity = (Button) activity.findViewById(R.id.btnShuffleLaunchActivity);
-	}
-
-	@Test
-	public void shouldUpdateResultsWhenButtonIsClicked() throws Exception {
-		pressMeButton.performClick();
-		String resultsText = results.getText().toString();
-		assertThat(resultsText, equalTo("Meuh"));
 	}
 
 	@Test
@@ -54,4 +45,5 @@ public class StraykbolActivityTest {
 		ShadowIntent shadowIntent = shadowOf(startedIntent);
 		assertThat(shadowIntent.getComponent().getClassName(), equalTo(MainShuffleActivity.class.getName()));
 	}
+
 }
