@@ -3,6 +3,7 @@
 	<string name="app_name">Straykbol</string>
 
     <string name="about_activity_name">A propos de</string>
+    <string name="about_author_note">Created by the mighty BabylonZeus in all His wisdom and glory (aka Camarade Patrov).</string>
     <string name="menu_name_main">Menu</string>
     <string name="menuitem_about_main">A propos de</string>
 

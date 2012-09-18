@@ -4,9 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.*;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 import fr.zeus.straykbol.R;
+import fr.zeus.straykbol.ihm.shuffle.MainShuffleActivity;
 import roboguice.activity.RoboActivity;
 import roboguice.inject.InjectView;
 

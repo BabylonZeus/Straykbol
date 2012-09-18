@@ -7,6 +7,7 @@ import com.xtremelabs.robolectric.RobolectricTestRunner;
 import com.xtremelabs.robolectric.shadows.ShadowActivity;
 import com.xtremelabs.robolectric.shadows.ShadowIntent;
 import fr.zeus.straykbol.R;
+import fr.zeus.straykbol.ihm.shuffle.MainShuffleActivity;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

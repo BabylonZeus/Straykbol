@@ -10,7 +10,55 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Version"
-                android:id="@+id/lblAboutVersion" android:layout_column="0"/>
+                android:text="Version name : "
+                android:id="@+id/lblAboutVersionNameTitle" android:layout_column="0"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/lblAboutVersionNameValue" android:layout_column="1"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="                                   "
+                android:id="@+id/textView" android:layout_column="2"/>
+    </TableRow>
+    <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Version code : "
+                android:id="@+id/lblAboutVersionCodeTitle" android:layout_column="0"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/lblAboutVersionCodeValue" android:layout_column="1"/>
+    </TableRow>
+    <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Package : "
+                android:id="@+id/lblAboutPackageTitle" android:layout_column="0"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/lblAboutPackageValue" android:layout_column="1"/>
+    </TableRow>
+    <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_author_note"
+                android:id="@+id/lblAboutAuthorNote" android:layout_column="0"
+                android:layout_span="3"/>
     </TableRow>
 </TableLayout>

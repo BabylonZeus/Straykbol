@@ -5,7 +5,7 @@ import android.view.MenuInflater;
 import com.xtremelabs.robolectric.shadows.ShadowActivity;
 import com.xtremelabs.robolectric.shadows.ShadowMenuInflater;
 import com.xtremelabs.robolectric.tester.android.view.TestMenu;
-import fr.zeus.straykbol.ihm.ListManagerActivity;
+import fr.zeus.straykbol.ihm.utilities.ListManagerActivity;
 
 import static com.xtremelabs.robolectric.Robolectric.shadowOf;
 

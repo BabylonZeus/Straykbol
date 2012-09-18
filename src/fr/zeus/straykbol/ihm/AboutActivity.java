@@ -3,7 +3,6 @@ package fr.zeus.straykbol.ihm;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import fr.zeus.straykbol.R;
@@ -11,7 +10,6 @@ import roboguice.activity.RoboActivity;
 import roboguice.inject.InjectView;
 
 import static android.widget.Toast.makeText;
-import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
 /**
@@ -20,7 +18,9 @@ import static org.junit.Assert.assertThat;
  */
 public class AboutActivity extends RoboActivity
 {
-	@InjectView(R.id.lblAboutVersion) private TextView lblAbout;
+	@InjectView(R.id.lblAboutVersionNameValue) private TextView lblAboutVersionNameValue;
+	@InjectView(R.id.lblAboutVersionCodeValue) private TextView lblAboutVersionCodeValue;
+	@InjectView(R.id.lblAboutPackageValue) private TextView lblAboutPackageValue;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,9 @@ public class AboutActivity extends RoboActivity
 		try
 		{
 			pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
-			lblAbout.setText(pInfo.versionName);
+			lblAboutVersionNameValue.setText(pInfo.versionName);
+			lblAboutVersionCodeValue.setText(String.valueOf(pInfo.versionCode));
+			lblAboutPackageValue.setText(pInfo.packageName);
 		}
 		catch (PackageManager.NameNotFoundException e)
 		{

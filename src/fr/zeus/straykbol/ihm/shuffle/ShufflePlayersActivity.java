@@ -7,7 +7,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.google.common.collect.ImmutableList;
 import fr.zeus.straykbol.R;
-import fr.zeus.straykbol.ShuffleUtility;
+import fr.zeus.straykbol.tools.ShuffleUtility;
 import fr.zeus.straykbol.ihm.StraykbolActivity;
 import fr.zeus.straykbol.tools.ActivityTools;
 import roboguice.activity.RoboActivity;

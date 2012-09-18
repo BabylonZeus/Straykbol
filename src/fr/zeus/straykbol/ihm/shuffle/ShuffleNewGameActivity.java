@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import fr.zeus.straykbol.R;
-import fr.zeus.straykbol.ihm.ListManagerActivity;
+import fr.zeus.straykbol.ihm.utilities.ListManagerActivity;
 
 /**
  * Created on 08/09/2012 10:39 PM with IntelliJ IDEA,
