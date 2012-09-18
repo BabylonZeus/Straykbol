@@ -98,7 +98,7 @@ public class MainShuffleActivity extends RoboActivity {
 			txtPlayers.setText("Aucune partie en cours");
 		}
 		else {
-			txtPlayers.setText("Joueurs : " + players.toString());
+			txtPlayers.setText("Joueurs dans la partie : " + players.toString());
 		}
 	}
 

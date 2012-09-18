@@ -79,5 +79,6 @@ public class ShufflePlayersActivityTest {
 		assertThat(btnShowTarget.getVisibility(), is(View.VISIBLE));
 		assertThat(btnShowNextPlayer.getVisibility(), not(View.VISIBLE));
 
+		assertThat(lblCurrentPlayer.getText().toString(), is("Manwë"));
 	}
 }

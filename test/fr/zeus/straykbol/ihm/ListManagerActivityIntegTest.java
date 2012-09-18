@@ -21,7 +21,8 @@ import static org.hamcrest.core.IsNot.not;
  * by the venerable Kosh in all His wisdom and glory.
  */
 @RunWith(RobolectricTestRunner.class)
-public class ListManagerActivityAcceptanceTest {
+public class ListManagerActivityIntegTest
+{
 	private ListManagerActivity activity;
 	private EditText editTextId;
 

@@ -26,6 +26,7 @@ public class ShufflePlayersActivity extends RoboActivity {
 	private ImmutableList<String> playersRandom;
 	private Integer currentPlayer;
 
+	@InjectView(R.id.lblRamdomizedList) private TextView lblRandomizedList;
 	@InjectView(R.id.lblCurrentPlayer) private TextView lblCurrentPlayer;
 	@InjectView(R.id.lblTargetPlayer) private TextView lblTargetPlayer;
 	@InjectView(R.id.btnShufflePlayersShowTarget) private Button btnShowTarget;
@@ -36,6 +37,7 @@ public class ShufflePlayersActivity extends RoboActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.shuffle_players_activity);
 		currentPlayer = 0;
+		if (StraykbolActivity.DEBUG) lblRandomizedList.setVisibility(View.VISIBLE);
 
 		lblCurrentPlayer.setVisibility(View.VISIBLE);
 		lblTargetPlayer.setVisibility(View.INVISIBLE);
@@ -44,6 +46,7 @@ public class ShufflePlayersActivity extends RoboActivity {
 
 		playersArbitrary = ActivityTools.retrieveArrayListFromIntent(getIntent(), LIST_NAME);
 		playersRandom = ShuffleUtility.retrieveRandomizedList(playersArbitrary);
+		lblRandomizedList.setText("Résultat : " + playersRandom.toString());
 
 		if (playersArbitrary.size()> 0) {
 			lblCurrentPlayer.setText(playersArbitrary.get(0));
@@ -74,7 +77,8 @@ public class ShufflePlayersActivity extends RoboActivity {
 					lblTargetPlayer.setVisibility(View.INVISIBLE);
 					btnShowTarget.setVisibility(View.VISIBLE);
 					btnShowNextPlayer.setVisibility(View.INVISIBLE);
-					currentPlayer++;
+					currentPlayer = browseToNextPlayer(currentPlayer);
+					lblCurrentPlayer.setText(playersArbitrary.get(currentPlayer));
 				}
 				else {
 					makeText(ShufflePlayersActivity.this, R.string.shuffle_players_empty_message, Toast.LENGTH_LONG).show();
@@ -95,6 +99,16 @@ public class ShufflePlayersActivity extends RoboActivity {
 	public Integer getCurrentPlayer()
 	{
 		return currentPlayer;
+	}
+
+	private Integer browseToNextPlayer(Integer currentPlayer) {
+		if (playersRandom == null || playersRandom.size() == 0) {
+			return 0;
+		}
+		if (currentPlayer == playersRandom.size() - 1) {
+			return 0;
+		}
+		return currentPlayer + 1;
 	}
 
 }
