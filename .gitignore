@@ -1,5 +1,8 @@
 .git/
 tmp/
 out/
-target/
 .idea/
+
+!target/
+target/*
+!target/Straykbol.apk
