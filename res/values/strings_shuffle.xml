@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="shuffle_activity_name">Gestion des tirages au sort</string>
+    <string name="shuffle_newgame_activity_name">Créer une partie</string>
+    <string name="shuffle_shuffle_activity_name">Mélanger</string>
+    <string name="shuffle_button_default_players">Joueurs par défaut</string>
+
+    <string name="menu_name_shuffle_newgame">Menu de création de joueurs</string>
+    <string name="shuffle_players_empty_message">Il n\'y a aucun joueur dans la partie</string>
+
+    <string name="shuffle_players_activity_name">Tirage au sort</string>
+
+    <string name="menu_item_shuffle_newgame_add_item">Ajouter un joueur</string>
+    <string name="menu_item_shuffle_newgame_delete_item">Supprimer ce joueur</string>
+    <string name="menu_item_shuffle_newgame_create_list">Créer la partie</string>
+</resources>

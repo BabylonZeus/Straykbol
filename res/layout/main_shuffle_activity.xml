@@ -4,24 +4,31 @@
 			 android:layout_width="fill_parent"
 			 android:layout_height="fill_parent">
 
+    <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:paddingBottom="10dp">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shuffle_button_default_players"
+                android:id="@+id/btnShufflePopulateDefaultPlayers" android:layout_column="0"
+                style="@style/ButtonTool" android:textColor="@color/camo_green_text" android:layout_span="3"/>
+    </TableRow>
 	<TableRow
 			android:layout_width="fill_parent"
-			android:layout_height="fill_parent">
+			android:layout_height="fill_parent" android:paddingBottom="10dp">
 		<Button
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:text="Joueurs par défaut"
-				android:id="@+id/btnShufflePopulateDefaultPlayers" android:layout_column="0"/>
+				android:text="@string/shuffle_newgame_activity_name"
+				android:id="@+id/btnShuffleLaunchNewGameActivity" android:layout_column="1"
+                style="@style/ButtonTool" android:textColor="@color/camo_green_text"/>
 		<Button
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:text="Créer partie"
-				android:id="@+id/btnShuffleLaunchNewGameActivity" android:layout_column="1"/>
-		<Button
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:text="Mélanger"
-				android:id="@+id/btnShuffleLaunchShufflePlayersActivity" android:layout_column="2"/>
+				android:text="@string/shuffle_shuffle_activity_name"
+				android:id="@+id/btnShuffleLaunchShufflePlayersActivity" android:layout_column="2"
+                style="@style/ButtonTool" android:textColor="@color/camo_green_text"/>
 	</TableRow>
 	<TableRow
 			android:layout_width="fill_parent"

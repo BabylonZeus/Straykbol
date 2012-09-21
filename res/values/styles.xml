@@ -13,4 +13,8 @@
 		<item name="android:background">@drawable/btn_toggle_holo_dark</item>
 	</style>
 
+    <style name="ButtonTool">
+        <item name="android:background">@drawable/selector_button_tool</item>
+    </style>
+
 </resources>

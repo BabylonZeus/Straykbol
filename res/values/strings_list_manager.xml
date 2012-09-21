@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="list_manager_add_item_defaultvalue"></string>
+    <string name="list_manager_activity_name">Créer une liste</string>
+    <string name="menu_name_list_manager">Menu du gestionnaire de liste</string>
+    <string name="menu_item_list_manager_add_item">Ajouter un item</string>
+    <string name="menu_item_list_manager_delete_item">Supprimer cet item</string>
+    <string name="menu_item_list_manager_create_list">Créer liste</string>
+</resources>

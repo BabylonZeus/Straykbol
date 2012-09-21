@@ -4,4 +4,6 @@
 	<color name="notepad_lines">#FF0000FF</color>
 	<color name="notepad_margin">#90FF0000</color>
 	<color name="notepad_text">#AA0000FF</color>
+    <color name="camo_green_text">#FF33CC00</color>
+    <color name="russian_red">#FFFF3333</color>
 </resources>
