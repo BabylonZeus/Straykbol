@@ -43,7 +43,7 @@ public class UserAdapter {
 			return -1;
 		}
 		c.moveToNext();
-		return Integer.valueOf(c.getString(0));
+		return c.getInt(0);
 	}
 
 	public String getNameFromId(Integer id) {
