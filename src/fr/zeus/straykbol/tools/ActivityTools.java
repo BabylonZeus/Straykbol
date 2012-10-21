@@ -1,6 +1,8 @@
 package fr.zeus.straykbol.tools;
 
 import android.content.Intent;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -21,5 +23,9 @@ public class ActivityTools {
 
 	public static Intent retrieveIntentFromArrayList(ArrayList<String> players, String listName) {
 		return new Intent().putStringArrayListExtra(listName,  players);
+	}
+
+	public static String printViewMainParameters(View view) {
+		return view.getId() + " : width=" + view.getWidth() + "; ";
 	}
 }

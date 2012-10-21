@@ -1,14 +1,25 @@
 package fr.zeus.straykbol.tools;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import com.xtremelabs.robolectric.RobolectricTestRunner;
+import com.xtremelabs.robolectric.shadows.ShadowActivity;
+import fr.zeus.straykbol.R;
+import fr.zeus.straykbol.ihm.utilities.ListManagerActivity;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.util.ArrayList;
 
+import static com.xtremelabs.robolectric.Robolectric.shadowOf;
+import static fr.zeus.straykbol.tools.ActivityTools.printViewMainParameters;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsSame.sameInstance;
+import static org.hamcrest.core.StringContains.containsString;
+import static org.hamcrest.text.StringContainsInOrder.stringContainsInOrder;
 
 /**
  * Created on 16/09/12 17:57 with IntelliJ IDEA,
@@ -31,6 +42,19 @@ public class ActivityToolsTest {
 	public void shouldRetrieveIntentFromArrayList() {
 		ArrayList<String> players = GenericTestingTools.createListOfPlayers();
 		assertThat(ActivityTools.retrieveIntentFromArrayList(players, LIST_NAME).getStringArrayListExtra(LIST_NAME), sameInstance(players));
+	}
+
+	@Test
+	public void shouldPrintViewParameters () {
+		Context x = shadowOf(new Activity()).getApplicationContext();
+		LinearLayout l = new LinearLayout(x);
+		Button btn = new Button(x);
+		btn.setLayoutParams(new LinearLayout.LayoutParams(100, 50));
+		btn.setId(R.id.btnShufflePlayersShowNextPlayer);
+		l.addView(btn);
+		String p = printViewMainParameters(btn);
+		System.out.println("p = " + p);
+		assertThat(p, containsString("width=")); //ToDo: pourquoi width reste à 0 ?
 	}
 
 }
