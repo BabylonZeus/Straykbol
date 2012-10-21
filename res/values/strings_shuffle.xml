@@ -19,4 +19,6 @@
 	<string name="shuffle_players_show_target">Afficher Cible</string>
 	<string name="shuffle_players_next_player">Suivant</string>
 	<string name="shuffle_players_results">Résultat : </string>
+	<string name="shuffle_players_list">Joueurs :</string>
+	<string name="shuffle_players_show_results">Afficher les résultats directement</string>
 </resources>

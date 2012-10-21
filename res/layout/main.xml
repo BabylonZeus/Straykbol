@@ -5,28 +5,21 @@
 			  android:layout_height="fill_parent"
 		>
 	<TextView
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:text="Privét, Tovarich"
-			android:id="@+id/textview"
-            android:paddingBottom="30dp" android:typeface="serif" android:textColor="@color/russian_red"/>
-    <TableLayout
 			android:layout_width="wrap_content"
-			android:layout_height="fill_parent" android:layout_gravity="left|center_vertical">
-		<TableRow
-				android:layout_width="fill_parent"
-				android:layout_height="fill_parent">
-		</TableRow>
-		<TableRow
-				android:layout_width="fill_parent"
-				android:layout_height="fill_parent">
-			<Button
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:text="Tirages au sort"
-					android:id="@+id/btnShuffleLaunchActivity" android:layout_column="0"
-                    style="@style/ButtonTool" android:textColor="@color/camo_green_text"/>
-		</TableRow>
-	</TableLayout>
+			android:layout_height="wrap_content"
+			android:text="@string/main_tovarich"
+			android:id="@+id/textview"
+            android:paddingBottom="30dp" android:typeface="serif" android:textColor="@color/russian_red"
+		android:layout_gravity="center_horizontal"
+		android:paddingTop="10dp" />
+
+	<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/main_activity_shuffle"
+			android:id="@+id/btnShuffleLaunchActivity"
+		style="@style/ButtonTool" android:textColor="@color/camo_green_text"
+		android:layout_gravity="center_horizontal" />
+
 </LinearLayout>
 

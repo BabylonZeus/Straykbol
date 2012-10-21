@@ -9,5 +9,7 @@
 
 	<string name="selectEntry">Action</string>
 	<string name="cancel">Annuler</string>
+	<string name="main_tovarich">Privét, Tovarich</string>
+	<string name="main_activity_shuffle">Tirages au sort</string>
 
 </resources>
