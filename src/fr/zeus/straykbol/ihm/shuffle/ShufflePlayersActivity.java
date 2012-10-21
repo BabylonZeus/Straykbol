@@ -16,6 +16,7 @@ import roboguice.inject.InjectView;
 import java.util.ArrayList;
 
 import static android.widget.Toast.makeText;
+import static fr.zeus.straykbol.tools.ActivityTools.printViewMainParameters;
 
 /**
  * Created on 16/09/12 15:24 with IntelliJ IDEA,
@@ -47,10 +48,10 @@ public class ShufflePlayersActivity extends RoboActivity {
 
 		playersArbitrary = ActivityTools.retrieveArrayListFromIntent(getIntent(), LIST_NAME);
 		playersRandom = ShuffleUtility.retrieveRandomizedList(playersArbitrary);
-		lblRandomizedList.setText("Résultat : " + playersRandom.toString());
+		lblRandomizedList.setText(getString(R.string.shuffle_players_results) + playersRandom.toString());
 
 		if (playersArbitrary.size()> 0) {
-			lblCurrentPlayer.setText(playersArbitrary.get(0));
+			lblCurrentPlayer.setText(getString(R.string.shuffle_players_current_player) + playersArbitrary.get(0));
 			lblTargetPlayer.setText("");
 		}
 
@@ -62,7 +63,7 @@ public class ShufflePlayersActivity extends RoboActivity {
 					lblTargetPlayer.setVisibility(View.VISIBLE);
 					btnShowTarget.setVisibility(View.INVISIBLE);
 					btnShowNextPlayer.setVisibility(View.VISIBLE);
-					lblTargetPlayer.setText(ShuffleUtility.findNextElement(playersRandom, playersArbitrary.get(currentPlayer)));
+					lblTargetPlayer.setText(getString(R.string.shuffle_players_target_player) + ShuffleUtility.findNextElement(playersRandom, playersArbitrary.get(currentPlayer)));
 				}
 				else {
 					makeText(ShufflePlayersActivity.this, R.string.shuffle_players_empty_message, Toast.LENGTH_LONG).show();
@@ -70,18 +71,22 @@ public class ShufflePlayersActivity extends RoboActivity {
 			}
 		});
 
-		btnShowNextPlayer.setOnClickListener(new View.OnClickListener() {
+		btnShowNextPlayer.setOnClickListener(new View.OnClickListener()
+		{
 			@Override
-			public void onClick(View view) {
-				if (playersArbitrary != null && playersArbitrary.size() > 0) {
+			public void onClick(View view)
+			{
+				if (playersArbitrary != null && playersArbitrary.size() > 0)
+				{
 					lblCurrentPlayer.setVisibility(View.VISIBLE);
 					lblTargetPlayer.setVisibility(View.INVISIBLE);
 					btnShowTarget.setVisibility(View.VISIBLE);
 					btnShowNextPlayer.setVisibility(View.INVISIBLE);
 					currentPlayer = browseToNextPlayer(currentPlayer);
-					lblCurrentPlayer.setText(playersArbitrary.get(currentPlayer));
+					lblCurrentPlayer.setText(getString(R.string.shuffle_players_current_player) + playersArbitrary.get(currentPlayer));
 				}
-				else {
+				else
+				{
 					makeText(ShufflePlayersActivity.this, R.string.shuffle_players_empty_message, Toast.LENGTH_LONG).show();
 				}
 			}

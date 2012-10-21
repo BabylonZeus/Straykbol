@@ -13,4 +13,10 @@
     <string name="menu_item_shuffle_newgame_add_item">Ajouter un joueur</string>
     <string name="menu_item_shuffle_newgame_delete_item">Supprimer ce joueur</string>
     <string name="menu_item_shuffle_newgame_create_list">Créer la partie</string>
+
+	<string name="shuffle_players_current_player">Joueur courant : </string>
+	<string name="shuffle_players_target_player">Cible : </string>
+	<string name="shuffle_players_show_target">Afficher Cible</string>
+	<string name="shuffle_players_next_player">Suivant</string>
+	<string name="shuffle_players_results">Résultat : </string>
 </resources>

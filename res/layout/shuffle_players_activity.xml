@@ -1,44 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 			 android:layout_width="fill_parent"
 			 android:layout_height="fill_parent">
-	<TextView
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:text=""
-			android:id="@+id/lblCurrentPlayer"
-			/>
-	<TextView
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:text=""
-			android:id="@+id/lblTargetPlayer"
-			/>
-	<TableRow
+
+	<TableLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/tableLayout"
+		android:baselineAligned="false">
+
+		<TableRow
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+
+			<TextView
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="@string/shuffle_players_current_player"
+					android:id="@+id/lblCurrentPlayer"
+				android:layout_marginLeft="0dp"
+				android:layout_marginTop="0dp" />
+		</TableRow>
+
+		<TableRow
 			android:layout_width="fill_parent"
 			android:layout_height="fill_parent">
-		<Button
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:text="Afficher Cible"
-				android:id="@+id/btnShufflePlayersShowTarget" android:layout_column="0"
-                style="@style/ButtonTool" android:textColor="@color/camo_green_text"/>
-		<Button
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:text="Suivant"
-				android:id="@+id/btnShufflePlayersShowNextPlayer" android:layout_column="1"
-                style="@style/ButtonTool" android:textColor="@color/camo_green_text"/>
-	</TableRow>
-    <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Résultat :"
-                android:id="@+id/lblRamdomizedList" android:layout_column="0" android:layout_span="2"
-                android:visibility="invisible"/>
-    </TableRow>
-</TableLayout>
+
+			<TextView
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="@string/shuffle_players_target_player"
+					android:id="@+id/lblTargetPlayer" />
+		</TableRow>
+
+		<TableRow
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent">
+
+			<TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/shuffle_players_results"
+			        android:id="@+id/lblRamdomizedList" android:layout_column="0"
+				android:visibility="invisible" />
+		</TableRow>
+
+	</TableLayout>
+
+	<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/shuffle_players_show_target"
+			android:id="@+id/btnShufflePlayersShowTarget"
+		style="@style/ButtonTool" android:textColor="@color/camo_green_text"
+		android:layout_centerHorizontal="true"
+		android:layout_alignParentTop="true"
+		android:layout_marginTop="104dp" />
+
+	<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/shuffle_players_next_player"
+			android:id="@+id/btnShufflePlayersShowNextPlayer"
+		style="@style/ButtonTool" android:textColor="@color/camo_green_text"
+		android:layout_alignLeft="@+id/btnShufflePlayersShowTarget"
+		android:layout_alignParentTop="true"
+		android:layout_marginTop="146dp" />
+
+</RelativeLayout>
