@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import com.xtremelabs.robolectric.RobolectricTestRunner;
 import com.xtremelabs.robolectric.shadows.ShadowIntent;
 import fr.zeus.straykbol.R;
@@ -70,8 +71,10 @@ public class MainShuffleActivityTest {
 	@Test
 	public void shouldOpenShufflePlayersActivity() {
 		activity.onActivityResult(MainShuffleActivity.REQUEST_LIST_MANAGER, Activity.RESULT_OK, intent);
+		((CheckBox)activity.findViewById(R.id.chkShowResults)).setChecked(true);
 		btnShuffleGame.performClick();
 		ShadowIntent shadowIntent = shadowOf(shadowOf(activity).getNextStartedActivity());
 		assertThat(shadowIntent.getComponent().getClassName(), equalTo(ShufflePlayersActivity.class.getName()));
+		assertThat(shadowIntent.getExtras().getBoolean("showResults"), org.hamcrest.core.Is.is(true));
 	}
 }

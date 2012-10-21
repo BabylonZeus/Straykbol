@@ -39,7 +39,8 @@ public class ShufflePlayersActivity extends RoboActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.shuffle_players_activity);
 		currentPlayer = 0;
-		if (StraykbolActivity.DEBUG) lblRandomizedList.setVisibility(View.VISIBLE);
+		if (getIntent().getBooleanExtra("showResults", false)) lblRandomizedList.setVisibility(View.VISIBLE);
+		else lblRandomizedList.setVisibility(View.INVISIBLE);
 
 		lblCurrentPlayer.setVisibility(View.VISIBLE);
 		lblTargetPlayer.setVisibility(View.INVISIBLE);

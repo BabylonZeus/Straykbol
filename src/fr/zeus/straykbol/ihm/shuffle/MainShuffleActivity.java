@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 import fr.zeus.straykbol.R;
@@ -27,6 +28,7 @@ public class MainShuffleActivity extends RoboActivity {
 	@InjectView(R.id.btnShuffleLaunchShufflePlayersActivity) private Button btnShufflePlayers;
 	@InjectView(R.id.btnShufflePopulateDefaultPlayers) private Button btnDefaultPlayers;
 	@InjectView(R.id.txtShuffleLaunchPlayerManagementActivityListPlayers) private TextView txtPlayers;
+	@InjectView(R.id.chkShowResults) private CheckBox chkShowResults;
 
 	ArrayList players;
 
@@ -54,6 +56,7 @@ public class MainShuffleActivity extends RoboActivity {
 				if (players != null && players.size() > 0) {
 					Intent myIntent = new Intent(MainShuffleActivity.this, ShufflePlayersActivity.class);
 					myIntent.putStringArrayListExtra(LIST_NAME, players);
+					myIntent.putExtra("showResults", chkShowResults.isChecked());
 					MainShuffleActivity.this.startActivityForResult(myIntent, REQUEST_LIST_MANAGER);
 				} else {
 					Toast.makeText(MainShuffleActivity.this, R.string.shuffle_players_empty_message, Toast.LENGTH_LONG).show();
