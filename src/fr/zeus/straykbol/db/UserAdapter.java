@@ -5,6 +5,9 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created on 03/09/2012 9:48 PM with IntelliJ IDEA,
  * by the mighty babylonzeus in all His wisdom and glory.
@@ -37,7 +40,7 @@ public class UserAdapter {
 		return db.insert("users", null, content);
 	}
 
-	public Integer getUserId(String name, String firstname, String nickname) {
+	public Integer getUserIdByName(String name) {
 		Cursor c = db.query(true, "users", new String[]{"id"}, "name=\"" + name + "\"", null, null, null, null, null);
 		if (c.getCount() > 1) {
 			return -1;
@@ -45,13 +48,28 @@ public class UserAdapter {
 		c.moveToNext();
 		return c.getInt(0);
 	}
+	public Integer getUserIdByNickname(String nickname)
+	{
+		Cursor c = db.query(true, "users", new String[]{"id"}, "nickname=\"" + nickname + "\"", null, null, null, null, null);
+		if (c.getCount() > 1) {
+			return -1;
+		}
+		c.moveToNext();
+		return c.getInt(0);
+	}
 
-	public String getNameFromId(Integer id) {
-		Cursor c = db.query(true, "users", new String[]{"name"}, "id=" + id + "", null, null, null, null, null);
+	public Map<String, String> getUserById(Integer id) {
+		Cursor c = db.query(true, "users", new String[]{"name", "firstname", "nickname"},
+				"id=" + id + "", null, null, null, null, null);
 		if (c.getCount() > 1) {
 			return null;
 		}
 		c.moveToNext();
-		return c.getString(0);
+		Map<String, String> user = new HashMap<>();
+		user.put("name", c.getString(0));
+		user.put("firstname", c.getString(1));
+		user.put("nickname", c.getString(2));
+		return user;
 	}
+
 }

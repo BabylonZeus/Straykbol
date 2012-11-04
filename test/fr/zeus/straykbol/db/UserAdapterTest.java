@@ -2,15 +2,15 @@ package fr.zeus.straykbol.db;
 
 import android.app.Activity;
 import android.content.Context;
-import android.test.AndroidTestCase;
 import com.xtremelabs.robolectric.RobolectricTestRunner;
-import com.xtremelabs.robolectric.shadows.ShadowActivity;
-import org.hamcrest.core.IsNull;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.util.Map;
+
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.collection.IsMapContaining.hasEntry;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNull.notNullValue;
 
@@ -45,16 +45,26 @@ public class UserAdapterTest {
 	}
 
 	@Test
-	public void testGetUserId() {
+	public void shouldGetUserIdByName() {
 		db.addUser(SAMPLE_NAME, SAMPLE_FIRSTNAME, SAMPLE_NICKNAME);
-		Integer res = db.getUserId(SAMPLE_NAME, SAMPLE_FIRSTNAME, SAMPLE_NICKNAME);
+		Integer res = db.getUserIdByName(SAMPLE_NAME);
 		assertThat(res > 0, is(true));
 	}
 
 	@Test
-	public void testGetNameFromId() {
+	public void shouldGetUserIdByNickname() {
 		db.addUser(SAMPLE_NAME, SAMPLE_FIRSTNAME, SAMPLE_NICKNAME);
-		Integer id = db.getUserId(SAMPLE_NAME, SAMPLE_FIRSTNAME, SAMPLE_NICKNAME);
-		assertThat(db.getNameFromId(id), is(SAMPLE_NAME));
+		Integer res = db.getUserIdByNickname(SAMPLE_NICKNAME);
+		assertThat(res > 0, is(true));
+	}
+
+	@Test
+	public void shouldGetUserInformationFromId() {
+		db.addUser(SAMPLE_NAME, SAMPLE_FIRSTNAME, SAMPLE_NICKNAME);
+		Integer id = db.getUserIdByName(SAMPLE_NAME);
+		Map<String, String> user =  db.getUserById(id);
+		assertThat(user, hasEntry("name", SAMPLE_NAME));
+		assertThat(user, hasEntry("firstname", SAMPLE_FIRSTNAME));
+		assertThat(user, hasEntry("nickname", SAMPLE_NICKNAME));
 	}
 }

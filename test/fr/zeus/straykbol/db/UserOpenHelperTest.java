@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import com.xtremelabs.robolectric.RobolectricTestRunner;
+import org.hamcrest.core.IsEqual;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,7 +20,7 @@ import static org.hamcrest.core.IsEqual.equalTo;
  */
 @RunWith(RobolectricTestRunner.class)
 public class UserOpenHelperTest {
-	private SQLiteOpenHelper dbHelper;
+	private UserOpenHelper dbHelper;
 	private SQLiteDatabase db;
 	private Context context;
 
@@ -36,4 +37,10 @@ public class UserOpenHelperTest {
 		Cursor c = db.rawQuery("select * from users", null);
 		assertThat(c.getCount(), equalTo(0));
 	}
+
+	@Test
+	public void testExistenceOfUserTableV2() {
+		assertThat(dbHelper.existsUsersTable(), equalTo(true));
+	}
+
 }
