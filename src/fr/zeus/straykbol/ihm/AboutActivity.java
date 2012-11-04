@@ -10,7 +10,6 @@ import roboguice.activity.RoboActivity;
 import roboguice.inject.InjectView;
 
 import static android.widget.Toast.makeText;
-import static org.junit.Assert.assertThat;
 
 /**
  * Created on 18/09/2012 8:33 PM with IntelliJ IDEA,

@@ -7,16 +7,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.google.common.collect.ImmutableList;
 import fr.zeus.straykbol.R;
-import fr.zeus.straykbol.tools.ShuffleUtility;
-import fr.zeus.straykbol.ihm.StraykbolActivity;
 import fr.zeus.straykbol.tools.ActivityTools;
+import fr.zeus.straykbol.tools.ShuffleUtility;
 import roboguice.activity.RoboActivity;
 import roboguice.inject.InjectView;
 
 import java.util.ArrayList;
 
 import static android.widget.Toast.makeText;
-import static fr.zeus.straykbol.tools.ActivityTools.printViewMainParameters;
 
 /**
  * Created on 16/09/12 15:24 with IntelliJ IDEA,

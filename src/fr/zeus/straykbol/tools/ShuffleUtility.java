@@ -1,13 +1,11 @@
 package fr.zeus.straykbol.tools;
 
-import com.google.common.base.Predicate;
-import com.google.common.collect.Collections2;
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Iterables;
 
-import java.util.*;
-
-import static com.google.common.collect.Collections2.filter;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
 
 /**
  * Created on 29/08/2012 11:57 PM with IntelliJ IDEA,

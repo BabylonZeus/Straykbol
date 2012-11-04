@@ -1,13 +1,8 @@
 package fr.zeus.straykbol.ihm;
 
 import android.content.Intent;
-import android.view.KeyEvent;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
 import com.xtremelabs.robolectric.RobolectricTestRunner;
-import com.xtremelabs.robolectric.shadows.ShadowActivity;
-import com.xtremelabs.robolectric.shadows.ShadowIntent;
 import com.xtremelabs.robolectric.tester.android.view.TestMenuItem;
 import fr.zeus.straykbol.R;
 import org.junit.Assert;
@@ -17,9 +12,7 @@ import org.junit.runner.RunWith;
 
 import static com.xtremelabs.robolectric.Robolectric.shadowOf;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
-import static org.hamcrest.core.IsNot.not;
 
 /**
  * Created on 16/09/12 11:44 with IntelliJ IDEA,

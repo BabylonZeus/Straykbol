@@ -7,7 +7,6 @@ import android.widget.EditText;
 import com.xtremelabs.robolectric.RobolectricTestRunner;
 import com.xtremelabs.robolectric.tester.android.view.TestMenuItem;
 import fr.zeus.straykbol.R;
-import fr.zeus.straykbol.ihm.utilities.ListManagerActivity;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

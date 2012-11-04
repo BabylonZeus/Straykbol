@@ -6,9 +6,7 @@ import android.content.Intent;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import com.xtremelabs.robolectric.RobolectricTestRunner;
-import com.xtremelabs.robolectric.shadows.ShadowActivity;
 import fr.zeus.straykbol.R;
-import fr.zeus.straykbol.ihm.utilities.ListManagerActivity;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -19,7 +17,6 @@ import static fr.zeus.straykbol.tools.ActivityTools.printViewMainParameters;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsSame.sameInstance;
 import static org.hamcrest.core.StringContains.containsString;
-import static org.hamcrest.text.StringContainsInOrder.stringContainsInOrder;
 
 /**
  * Created on 16/09/12 17:57 with IntelliJ IDEA,

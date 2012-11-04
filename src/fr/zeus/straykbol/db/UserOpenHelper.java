@@ -5,8 +5,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import java.util.Map;
-
 /**
  * Created on 31/08/2012 12:05 AM with IntelliJ IDEA,
  * by the mighty babylonzeus in all His wisdom and glory.
