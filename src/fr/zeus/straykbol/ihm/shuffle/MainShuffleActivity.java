@@ -26,6 +26,7 @@ public class MainShuffleActivity extends RoboActivity {
 
 	@InjectView(R.id.btnShuffleLaunchNewGameActivity) private Button btnNewGame;
 	@InjectView(R.id.btnShuffleLaunchShufflePlayersActivity) private Button btnShufflePlayers;
+	@InjectView(R.id.btnShuffleLaunchManagePlayersActivity) private Button btnManagePlayers;
 	@InjectView(R.id.btnShufflePopulateDefaultPlayers) private Button btnDefaultPlayers;
 	@InjectView(R.id.txtShuffleLaunchPlayerManagementActivityListPlayers) private TextView txtPlayers;
 	@InjectView(R.id.chkShowResults) private CheckBox chkShowResults;
@@ -70,6 +71,15 @@ public class MainShuffleActivity extends RoboActivity {
 				populateInitialPlayers();
 			}
 		});
+
+		btnManagePlayers.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Intent myIntent = new Intent(MainShuffleActivity.this, ShuffleManagePlayersActivity.class);
+				MainShuffleActivity.this.startActivityForResult(myIntent, REQUEST_LIST_MANAGER);
+			}
+		});
+
 	}
 
 	@Override

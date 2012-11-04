@@ -31,6 +31,7 @@ public class MainShuffleActivityTest {
 	private MainShuffleActivity activity;
 	private Button btnNewGame;
 	private Button btnShuffleGame;
+	private Button btnManagePlayers;
 	Intent intent;
 
 	@Before
@@ -39,6 +40,7 @@ public class MainShuffleActivityTest {
 		activity.onCreate(null);
 		btnNewGame = (Button) activity.findViewById(R.id.btnShuffleLaunchNewGameActivity);
 		btnShuffleGame = (Button) activity.findViewById(R.id.btnShuffleLaunchShufflePlayersActivity);
+		btnManagePlayers = (Button) activity.findViewById(R.id.btnShuffleLaunchManagePlayersActivity);
 
 		ArrayList<String> listItems = GenericTestingTools.createListOfPlayers();
 		intent = new Intent();
@@ -73,5 +75,13 @@ public class MainShuffleActivityTest {
 		ShadowIntent shadowIntent = shadowOf(shadowOf(activity).getNextStartedActivity());
 		assertThat(shadowIntent.getComponent().getClassName(), equalTo(ShufflePlayersActivity.class.getName()));
 		assertThat(shadowIntent.getExtras().getBoolean("showResults"), org.hamcrest.core.Is.is(true));
+	}
+
+	@Test
+	public void shouldOpenManagePlayersActivity() {
+		activity.onActivityResult(MainShuffleActivity.REQUEST_LIST_MANAGER, Activity.RESULT_OK, intent);
+		btnManagePlayers.performClick();
+		ShadowIntent shadowIntent = shadowOf(shadowOf(activity).getNextStartedActivity());
+		assertThat(shadowIntent.getComponent().getClassName(), equalTo(ShuffleManagePlayersActivity.class.getName()));
 	}
 }

@@ -45,6 +45,14 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+		<activity android:icon="@drawable/nuclear"
+			android:name=".ihm.shuffle.ShuffleManagePlayersActivity"
+			android:label="@string/shuffle_manageplayers_activity_name">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+		</activity>
         <activity android:icon="@drawable/nuclear"
                   android:name=".ihm.AboutActivity"
                   android:label="@string/about_activity_name">
